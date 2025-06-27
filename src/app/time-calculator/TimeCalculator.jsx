@@ -287,7 +287,7 @@ export default function TimeCalculator() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${
                       !startTime || !endTime
                         ? "bg-white/5 text-white/30 cursor-not-allowed"
-                        : "bg-white/10 hover:bg-white/20 text-white hover:shadow-md"
+                        : "bg-white/10 hover:bg-white/20 text-white hover:shadow-md cursor-pointer"
                     }`}
                   >
                     <MdSwapHoriz className="h-4 w-4" />
@@ -305,7 +305,7 @@ export default function TimeCalculator() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${
                       !startTime || !endTime
                         ? "bg-white/5 text-white/30 cursor-not-allowed"
-                        : "bg-white/10 hover:bg-white/20 text-white hover:shadow-md"
+                        : "bg-white/10 hover:bg-white/20 text-white hover:shadow-md cursor-pointer"
                     }`}
                   >
                     <svg

@@ -4,20 +4,22 @@ import LeapYearChecker from "./LeapYearChecker";
 export const metadata = {
   title: "Leap Year Checker | Verify Any Year Online",
   description:
-    "Instantly check if any year is a leap year. Our tool accurately determines leap years following all the rules. Perfect for students, developers, and curious minds.",
+    "Instantly check if any year is a leap year with our accurate verification tool. Understand leap year rules and see why February gets an extra day every 4 years.",
   keywords: [
     "leap year checker",
     "is year a leap year",
     "leap year calculator",
     "leap year test",
     "year validator",
+    '366 day year',
+    'Gregorian calendar checker',
   ],
   // authors: [{ name: "Your Name", url: "https://yourdomain.com" }],
 
   openGraph: {
     title: "Leap Year Checker | Verify Any Year Online",
     description:
-      "Check if any year is a leap year with our accurate verification tool",
+      "Instantly check if any year is a leap year with our accurate verification tool. Understand leap year rules and see why February gets an extra day every 4 years.",
     url: "https://yourdomain.com/leap-year",
     siteName: "Your Site Name",
     images: [
@@ -38,7 +40,6 @@ export const metadata = {
     description:
       "Instantly check if any year is a leap year with our free online tool",
     images: ["https://yourdomain.com/images/leap-year-twitter.jpg"],
-    creator: "@yourtwitterhandle",
   },
 
   alternates: {
@@ -46,6 +47,6 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default function LeapYearCheckerPage() {
   return <LeapYearChecker />;
 }

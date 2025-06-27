@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { FiClock } from "react-icons/fi";
 
-export default function AgeCalculator() {
+export default function AgeCalculator({ title, content }) {
   const [birthDate, setBirthDate] = useState("");
   const [age, setAge] = useState({
     years: 0,
@@ -105,7 +105,7 @@ export default function AgeCalculator() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          name: "Age Calculator",
+          name: {title},
           description: "Calculate exact age from birth date",
           url: "https://yourdomain.com/age-calculator",
         })}
@@ -117,11 +117,11 @@ export default function AgeCalculator() {
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 sm:p-8 text-white">
             <div className="flex items-center justify-center gap-3">
               <h1 className="text-2xl sm:text-3xl font-bold text-center">
-                Age Calculator
+                {title}
               </h1>
             </div>
             <p className="text-blue-100 text-center mt-2">
-              Calculate your exact age in years, months, and days
+              {content}
             </p>
           </div>
 

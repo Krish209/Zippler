@@ -1,265 +1,187 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
-import { FiChevronDown, FiMenu, FiClock } from "react-icons/fi";
-import { AiOutlineClose } from "react-icons/ai";
-import { MdOutlineAccessTime, MdOutlineCalculate } from "react-icons/md";
-import logo from "../../public/Z3.png";
+import { usePathname } from "next/navigation";
+import { FiClock, FiMenu, FiX } from "react-icons/fi";
+import { MdOutlineCalculate, MdOutlineHome } from "react-icons/md";
+import { TbCalendarWeek } from "react-icons/tb";
+// import { BsStopwatch } from "react-icons/bs";
 import Image from "next/image";
-import ActiveLink from "./Activelink";
+import logo from "../../public/Z3.png";
 
-export const links = [
-  {
-    name: "Home",
-    link: "/",
-    icon: <FiClock className="w-4 h-4 mr-2 opacity-80" />
-  },
-  {
-    name: "Calculators",
-    link: "/calculators",
-    icon: <MdOutlineCalculate className="w-4 h-4 mr-2 opacity-80" />,
-    submenu: true,
-    sublinks: [
-      { 
-        name: "Time Duration", 
-        link: "/calculators/time",
-        icon: <MdOutlineAccessTime className="w-4 h-4 mr-2 opacity-70" />
-      },
-      { 
-        name: "Time Zone", 
-        link: "/calculators/timezone",
-        icon: <MdOutlineAccessTime className="w-4 h-4 mr-2 opacity-70" />
-      },
-    ],
-  },
-  {
-    name: "About",
-    link: "/about",
-    icon: <FiClock className="w-4 h-4 mr-2 opacity-80" />
-  },
-];
-
-function Header() {
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const menuRef = useRef(null);
-  const timeoutRef = useRef(null);
-
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleMobileMenu = useCallback(() => {
-    setMobileMenu((prev) => !prev);
-  }, []);
-
-  useEffect(() => {
-    if (mobileMenu) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [mobileMenu]);
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setMobileMenu(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleDropdownHover = useCallback((index) => {
-    clearTimeout(timeoutRef.current);
-    setActiveDropdown(index);
-  }, []);
-
-  const handleDropdownLeave = useCallback(() => {
-    timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 200);
-  }, []);
-
-  const handleDropdownToggle = useCallback((index) => {
-    setActiveDropdown((prev) => (prev === index ? null : index));
-  }, []);
+  const navLinks = [
+    {
+      name: "Time Tools",
+      href: "/time-calculator",
+      icon: <FiClock className="w-5 h-5" />,
+      subLinks: [
+        { name: "Time Calculator", href: "/time-calculator" },
+        { name: "Stopwatch", href: "/stopwatch" },
+        { name: "Sleep Calculator", href: "/sleep-calculator" },
+      ],
+    },
+    {
+      name: "Date Tools",
+      href: "/date-calculator",
+      icon: <TbCalendarWeek className="w-5 h-5" />,
+      subLinks: [
+        { name: "Date Calculator", href: "/date-calculator" },
+        { name: "Weekday Finder", href: "/weekday-finder" },
+        { name: "Leap Year Checker", href: "/leap-year-checker" },
+      ],
+    },
+    {
+      name: "Special Calculators",
+      href: "/age-calculator",
+      icon: <MdOutlineCalculate className="w-5 h-5" />,
+      subLinks: [
+        { name: "Age Calculator", href: "/age-calculator" },
+        { name: "Pet Age Calculator", href: "/pet-age-calculator" },
+        { name: "Anniversary Countdown", href: "/anniversary-countdown" },
+        { name: "Birthday Countdown", href: "/birthday-countdown" },
+      ],
+    },
+    {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+    },
+  ];
 
   return (
-    <header className="bg-slate-900/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 shadow-lg">
+    <header className="bg-slate-900/90 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo/Brand */}
-          <Link 
-            href="/" 
-            className="flex items-center space-x-2 group"
-          >
-            <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all duration-200">
-              <Image 
-                src={logo} 
-                alt="TimeTools Logo" 
-                width={28} 
-                height={28} 
-                className="filter brightness-125 group-hover:scale-105 transition-transform"
-              />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent hidden sm:inline-block">
-              TimeTools
-            </span>
-          </Link>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="flex items-center space-x-2 group text-xl font-bold"
+            >
+              <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all duration-200">
+                <Image
+                  src={logo}
+                  alt="TimeTools Logo"
+                  width={28}
+                  height={28}
+                  className="filter brightness-125 group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
+                TimeTools
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex h-full">
-            {links.map((item, index) => (
-              <div
-                key={index}
-                className="relative h-full flex items-center"
-                onMouseEnter={() => handleDropdownHover(index)}
-                onMouseLeave={handleDropdownLeave}
-              >
-                <ActiveLink
-                  href={item.link || "#"}
-                  className="flex items-center px-4 py-2 h-full text-sm font-medium text-gray-300 hover:text-white transition-colors group relative"
-                  activeClass="text-white"
+          <nav className="hidden md:flex items-center space-x-4">
+            {navLinks.map((link) => (
+              <div key={link.name} className="relative group">
+                <Link
+                  href={link.href}
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${
+                    pathname === link.href
+                      ? "text-blue-300 bg-blue-900/20"
+                      : "text-gray-300 hover:text-blue-300 hover:bg-white/5"
+                  }`}
                 >
-                  {item.icon}
-                  {item.name}
-                  {item.submenu && (
-                    <FiChevronDown
-                      className={`ml-1 transform transition-transform ${
-                        activeDropdown === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                  <span className={`absolute bottom-0 left-0 right-0 h-0.5 bg-blue-400 ${item.link === pathname ? 'scale-x-100' : 'scale-x-0'}`}></span>
-                </ActiveLink>
+                  {link.icon && <span className="mr-2">{link.icon}</span>}
+                  {link.name}
+                </Link>
 
-                {/* Dropdown Menu */}
-                {item.submenu && (
-                  <div
-                    className={`absolute top-full left-0 mt-0 py-2 w-56 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-b-lg shadow-xl transition-all z-50
-                      ${
-                        activeDropdown === index
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-0 translate-y-1 pointer-events-none"
-                      }`}
-                  >
-                    {item.sublinks.map((sub, i) => (
-                      <ActiveLink
-                        key={i}
-                        href={sub.link}
-                        className="flex items-center px-4 py-2.5 text-sm text-gray-300 hover:bg-blue-600/30 hover:text-white transition-colors"
-                        activeClass="bg-blue-600/30 text-white"
-                      >
-                        {sub.icon}
-                        {sub.name}
-                      </ActiveLink>
-                    ))}
+                {/* Dropdown for calculator categories */}
+                {link.subLinks && (
+                  <div className="absolute left-0 mt-2 w-56 origin-top-left rounded-md bg-slate-800 shadow-lg ring-1 ring-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="py-1">
+                      {link.subLinks.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          href={subLink.href}
+                          className={`block px-4 py-2 text-sm ${
+                            pathname === subLink.href
+                              ? "bg-blue-900/20 text-blue-300"
+                              : "text-gray-300 hover:bg-white/5 hover:text-blue-300"
+                          }`}
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-all group"
-            aria-label={mobileMenu ? "Close menu" : "Open menu"}
-          >
-            {mobileMenu ? (
-              <AiOutlineClose className="w-5 h-5 text-blue-300 group-hover:rotate-90 transition-transform" />
-            ) : (
-              <FiMenu className="w-5 h-5 text-blue-300 group-hover:scale-110 transition-transform" />
-            )}
-          </button>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <FiX className="h-6 w-6" />
+              ) : (
+                <FiMenu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <div
-        ref={menuRef}
-        className={`md:hidden fixed inset-y-0 right-0 w-full max-w-xs bg-slate-900/95 backdrop-blur-lg border-l border-white/10 shadow-2xl z-50 transform transition-transform duration-300 ease-out
-          ${mobileMenu ? "translate-x-0" : "translate-x-full"}`}
-      >
-        <div className="flex justify-between items-center p-4 border-b border-white/10 h-16">
-          <div className="flex items-center space-x-2">
-            <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30">
-              <Image src={logo} alt="TimeTools Logo" width={24} height={24} />
-            </div>
-            <span className="text-lg font-bold bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-              TimeTools
-            </span>
-          </div>
-          <button
-            onClick={toggleMobileMenu}
-            className="p-2 rounded-lg hover:bg-white/10 transition-colors"
-            aria-label="Close menu"
-          >
-            <AiOutlineClose className="w-5 h-5 text-blue-300" />
-          </button>
-        </div>
-
-        <nav className="p-4 overflow-y-auto h-[calc(100%-4rem)]">
-          {links.map((item, index) => (
-            <div key={index} className="mb-1">
-              {!item.submenu ? (
-                <ActiveLink
-                  href={item.link}
-                  onClick={() => setMobileMenu(false)}
-                  className="flex items-center px-4 py-3 rounded-lg hover:bg-white/5 hover:text-blue-300 transition-colors"
-                  activeClass="bg-white/10 text-blue-300"
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-slate-800/95 backdrop-blur-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <div key={link.name}>
+                <Link
+                  href={link.href}
+                  className={`flex items-center px-3 py-2 rounded-md text-base font-medium ${
+                    pathname === link.href
+                      ? "text-blue-300 bg-blue-900/20"
+                      : "text-gray-300 hover:text-blue-300 hover:bg-white/5"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item.icon}
-                  {item.name}
-                </ActiveLink>
-              ) : (
-                <>
-                  <button
-                    onClick={() => handleDropdownToggle(index)}
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
-                      activeDropdown === index
-                        ? "bg-white/10 text-blue-300"
-                        : "hover:bg-white/5 hover:text-blue-300"
-                    }`}
-                  >
-                    <div className="flex items-center">
-                      {item.icon}
-                      {item.name}
-                    </div>
-                    <FiChevronDown
-                      className={`transform transition-transform ${
-                        activeDropdown === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {activeDropdown === index && (
-                    <div className="ml-8 mt-1 space-y-1">
-                      {item.sublinks.map((sub, i) => (
-                        <ActiveLink
-                          key={i}
-                          href={sub.link}
-                          onClick={() => setMobileMenu(false)}
-                          className="flex items-center px-4 py-2.5 text-sm rounded-lg hover:bg-blue-600/30 hover:text-white transition-colors"
-                          activeClass="bg-blue-600/30 text-white"
-                        >
-                          {sub.icon}
-                          {sub.name}
-                        </ActiveLink>
-                      ))}
-                    </div>
-                  )}
-                </>
-              )}
-            </div>
-          ))}
-        </nav>
-      </div>
+                  {link.icon && <span className="mr-3">{link.icon}</span>}
+                  {link.name}
+                </Link>
+
+                {/* Mobile submenu */}
+                {link.subLinks && (
+                  <div className="pl-8 py-1 space-y-1">
+                    {link.subLinks.map((subLink) => (
+                      <Link
+                        key={subLink.name}
+                        href={subLink.href}
+                        className={`block px-3 py-2 rounded-md text-sm ${
+                          pathname === subLink.href
+                            ? "bg-blue-900/20 text-blue-300"
+                            : "text-gray-400 hover:bg-white/5 hover:text-blue-300"
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {subLink.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
-
-export default Header;
