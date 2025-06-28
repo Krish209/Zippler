@@ -141,6 +141,7 @@ export default function AgeCalculator({ title, content }) {
                   </label>
                   <div className="relative">
                     <input
+                      aria-label="Birth date input"
                       type="date"
                       id="birth-date-input"
                       value={birthDate}

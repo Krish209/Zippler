@@ -21,9 +21,17 @@ export default function DayOfWeekFinder() {
       }
 
       setError("");
-      
+
       // Get day of week
-      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
       setDayOfWeek(days[date.getDay()]);
 
       setIsCalculated(true);
@@ -77,6 +85,7 @@ export default function DayOfWeekFinder() {
                   </label>
                   <div className="relative">
                     <input
+                      aria-label="week-day-input"
                       type="date"
                       id="date-input"
                       value={inputDate}
@@ -132,7 +141,6 @@ export default function DayOfWeekFinder() {
                     </div>
                   )}
                 </div>
-
               </div>
 
               {/* Results Section */}
@@ -161,13 +169,20 @@ export default function DayOfWeekFinder() {
                           DID YOU KNOW?
                         </h4>
                         <p className="text-white/80 text-sm">
-                          {dayOfWeek === "Monday" && "Monday comes from 'Moon day' in Old English"}
-                          {dayOfWeek === "Tuesday" && "Tuesday is named after the Norse god Tyr"}
-                          {dayOfWeek === "Wednesday" && "Wednesday honors Odin (Woden in Old English)"}
-                          {dayOfWeek === "Thursday" && "Thursday is Thor's day in Norse mythology"}
-                          {dayOfWeek === "Friday" && "Friday is named after Frigg, the Norse goddess of love"}
-                          {dayOfWeek === "Saturday" && "Saturday is the only day named after a Roman god (Saturn)"}
-                          {dayOfWeek === "Sunday" && "Sunday has always been associated with the Sun"}
+                          {dayOfWeek === "Monday" &&
+                            "Monday comes from 'Moon day' in Old English"}
+                          {dayOfWeek === "Tuesday" &&
+                            "Tuesday is named after the Norse god Tyr"}
+                          {dayOfWeek === "Wednesday" &&
+                            "Wednesday honors Odin (Woden in Old English)"}
+                          {dayOfWeek === "Thursday" &&
+                            "Thursday is Thor's day in Norse mythology"}
+                          {dayOfWeek === "Friday" &&
+                            "Friday is named after Frigg, the Norse goddess of love"}
+                          {dayOfWeek === "Saturday" &&
+                            "Saturday is the only day named after a Roman god (Saturn)"}
+                          {dayOfWeek === "Sunday" &&
+                            "Sunday has always been associated with the Sun"}
                         </p>
                       </div>
                     </div>

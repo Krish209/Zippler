@@ -82,6 +82,7 @@ export default function LeapYearChecker() {
                   </label>
                   <div className="relative">
                     <input
+                      aria-label="leap-year-checker"
                       type="text" // Changed from number to text to remove arrows
                       inputMode="numeric" // Shows numeric keyboard on mobile
                       pattern="[0-9]*" // Helps with numeric input on mobile

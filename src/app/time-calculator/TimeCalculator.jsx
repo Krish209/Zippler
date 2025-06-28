@@ -224,6 +224,7 @@ export default function TimeCalculator() {
                     </label>
                     <div className="relative">
                       <input
+                        aria-label="start-time-input"
                         type={timeFormat === "12" ? "time" : "time"}
                         id="start-time-input"
                         value={startTime}
@@ -255,6 +256,7 @@ export default function TimeCalculator() {
                     </label>
                     <div className="relative">
                       <input
+                        aria-label="end-time-input"
                         type={timeFormat === "12" ? "time" : "time"}
                         id="end-time-input"
                         value={endTime}

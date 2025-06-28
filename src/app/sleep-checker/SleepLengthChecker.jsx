@@ -106,6 +106,7 @@ export default function SleepLengthChecker() {
                     </label>
                     <div className="relative">
                       <input
+                        aria-label="bed-time-input"
                         type="time"
                         id="bedtime-input"
                         value={bedtime}
@@ -134,6 +135,7 @@ export default function SleepLengthChecker() {
                     </label>
                     <div className="relative">
                       <input
+                        aria-label="wake-up-time-input"
                         type="time"
                         id="wakeup-input"
                         value={wakeupTime}

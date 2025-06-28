@@ -29,11 +29,11 @@ export default function NightCalculator() {
       }
 
       setError("");
-      
+
       // Calculate difference in days (nights = days - 1)
       const diffTime = Math.abs(end - start);
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      
+
       setNights(diffDays > 0 ? diffDays - 1 : 0);
       setIsCalculated(true);
     } else {
@@ -95,6 +95,7 @@ export default function NightCalculator() {
                   </label>
                   <div className="relative">
                     <input
+                      aria-label="start-night-input"
                       type="date"
                       value={startDate}
                       onChange={(e) => setStartDate(e.target.value)}
@@ -107,7 +108,9 @@ export default function NightCalculator() {
                       <MdOutlineCalendarToday
                         className="text-indigo-400 h-5 w-5 cursor-pointer hover:text-indigo-300 transition-colors"
                         onClick={() =>
-                          document.querySelector('input[type="date"]')?.showPicker()
+                          document
+                            .querySelector('input[type="date"]')
+                            ?.showPicker()
                         }
                       />
                     </label>
@@ -121,6 +124,7 @@ export default function NightCalculator() {
                   </label>
                   <div className="relative">
                     <input
+                      aria-label="end-night-input"
                       type="date"
                       value={endDate}
                       onChange={(e) => setEndDate(e.target.value)}
@@ -133,7 +137,9 @@ export default function NightCalculator() {
                       <MdOutlineCalendarToday
                         className="text-indigo-400 h-5 w-5 cursor-pointer hover:text-indigo-300 transition-colors"
                         onClick={() =>
-                          document.querySelectorAll('input[type="date"]')[1]?.showPicker()
+                          document
+                            .querySelectorAll('input[type="date"]')[1]
+                            ?.showPicker()
                         }
                       />
                     </label>
@@ -225,7 +231,8 @@ export default function NightCalculator() {
                         {nights}
                       </p>
                       <p className="mt-2 text-sm text-white/80">
-                        {nights === 1 ? "1 night" : `${nights} nights`} between dates
+                        {nights === 1 ? "1 night" : `${nights} nights`} between
+                        dates
                       </p>
                     </div>
                   </div>
@@ -249,7 +256,8 @@ export default function NightCalculator() {
                       <div className="absolute -inset-4 bg-indigo-500/10 rounded-full blur-md opacity-20"></div>
                     </div>
                     <p className="mt-4 text-center max-w-xs mx-auto">
-                      Select start and end dates to calculate the number of nights between them
+                      Select start and end dates to calculate the number of
+                      nights between them
                     </p>
                   </div>
                 )}
@@ -262,7 +270,8 @@ export default function NightCalculator() {
         <div className="bg-white/5 p-4 text-center text-xs text-white/50 border-t border-white/10">
           <div className="flex items-center justify-center gap-2">
             <span>
-              Perfect for travel planning, hotel stays, and vacation calculations
+              Perfect for travel planning, hotel stays, and vacation
+              calculations
             </span>
           </div>
         </div>

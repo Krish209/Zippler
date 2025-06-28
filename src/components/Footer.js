@@ -133,9 +133,9 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
               Navigation
-            </h3>
+            </p>
             <ul className="space-y-3">
               {mainLinks.map((link) => (
                 <li key={link.name}>
@@ -157,9 +157,9 @@ export default function Footer() {
 
           {/* Time Tools */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
               Time Tools
-            </h3>
+            </p>
             <ul className="space-y-3">
               {timeCalculators.map((link) => (
                 <li key={link.name}>
@@ -181,9 +181,9 @@ export default function Footer() {
 
           {/* Date Tools - Moves to second row on small screens */}
           <div className="col-span-2 md:col-span-1 space-y-4">
-            <h3 className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
               Date Tools
-            </h3>
+            </p>
             <ul className="space-y-3">
               {dateCalculators.map((link) => (
                 <li key={link.name}>
@@ -205,9 +205,9 @@ export default function Footer() {
 
           {/* Special Calculators - Full width on small screens */}
           <div className="col-span-2 md:col-span-1 space-y-4">
-            <h3 className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
               Special Calculators
-            </h3>
+            </p>
             <ul className="space-y-3">
               {specialCalculators.map((link) => (
                 <li key={link.name}>
@@ -230,10 +230,10 @@ export default function Footer() {
 
         {/* Copyright - Full width */}
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             &copy; {currentYear} TimeTools. All rights reserved.
           </p>
-          <p className="mt-2 flex items-center justify-center text-sm text-gray-500">
+          <p className="mt-2 flex items-center justify-center text-sm text-gray-600">
             Made with <FiHeart className="mx-1.5 text-red-400" /> for time enthusiasts
           </p>
         </div>

@@ -139,6 +139,7 @@ export default function SleepTimeCalculator() {
                 </label>
                 <div className="relative">
                   <input
+                    aria-label="Sleep time input"
                     type="time"
                     id="time-input"
                     value={inputTime}

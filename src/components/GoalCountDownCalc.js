@@ -36,7 +36,7 @@ export default function GoalCountdownCalculator({ title, content }) {
       }
 
       setError("");
-      
+
       // Calculate difference in years, months, and days
       let years = target.getFullYear() - today.getFullYear();
       let months = target.getMonth() - today.getMonth();
@@ -105,7 +105,7 @@ export default function GoalCountdownCalculator({ title, content }) {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          name: "{title}",
+          name: title,
           description: "Calculate time remaining until your target date",
           url: "https://yourdomain.com/goal-countdown",
         })}
@@ -143,11 +143,12 @@ export default function GoalCountdownCalculator({ title, content }) {
                   </label>
                   <div className="relative">
                     <input
+                      aria-label="target-date-input"
                       type="date"
                       id="target-date-input"
                       value={targetDate}
                       onChange={(e) => setTargetDate(e.target.value)}
-                      min={new Date().toISOString().split('T')[0]}
+                      min={new Date().toISOString().split("T")[0]}
                       className="w-full text-base bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-400 focus:border-blue-400
                         [&::-webkit-calendar-picker-indicator]:hidden
                         appearance-none transition-all duration-200 hover:bg-white/15"
@@ -337,7 +338,8 @@ export default function GoalCountdownCalculator({ title, content }) {
           <div className="bg-white/5 p-4 text-center text-xs text-white/50 border-t border-white/10">
             <div className="flex items-center justify-center gap-2">
               <span>
-                Perfect for tracking goals, events, deadlines, and special occasions
+                Perfect for tracking goals, events, deadlines, and special
+                occasions
               </span>
             </div>
           </div>

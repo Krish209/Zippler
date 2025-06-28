@@ -94,6 +94,7 @@ export default function Stopwatch() {
           {/* Controls */}
           <div className="flex justify-center gap-4 mb-8">
             <button
+              aria-label={isRunning ? "Pause Button" : "Start Button"}
               onClick={isRunning ? pause : start}
               className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-lg transition-all ${
                 isRunning
@@ -110,6 +111,7 @@ export default function Stopwatch() {
 
             <button
               onClick={recordLap}
+              aria-label="Record Lap Button"
               disabled={!isRunning}
               className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-all ${
                 isRunning
@@ -122,6 +124,7 @@ export default function Stopwatch() {
 
             <button
               onClick={reset}
+              aria-label="Reset stopwatch Button"
               className="w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 text-white shadow-lg transition-all flex items-center justify-center"
             >
               <FiRotateCw className="h-6 w-6" />

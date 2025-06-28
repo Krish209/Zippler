@@ -1,4 +1,5 @@
 // This is a server component (no 'use client')
+
 import TimeCalculator from "../time-calculator/TimeCalculator";
 
 export const metadata = {

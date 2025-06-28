@@ -2,8 +2,6 @@
 
 import GoalCountdownCalculator from "@/components/GoalCountDownCalc";
 
-// This is a server component (no 'use client')
-
 export const metadata = {
   title: "Birthday Countdown Calculator | Days Until Your Special Day",
   description:
@@ -51,6 +49,6 @@ export const metadata = {
   },
 };
 
-export default function BirthdayCalcualtorPage() {
+export default function BirthdayCalculatorPage() {
   return <GoalCountdownCalculator title="Birthday" content="birthday" />;
 }

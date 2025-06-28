@@ -125,6 +125,7 @@ export default function DateCalculator() {
                     </label>
                     <div className="relative">
                       <input
+                        aria-label="Start date input"
                         type="date"
                         id="start-date-input"
                         value={startDate}
@@ -154,6 +155,7 @@ export default function DateCalculator() {
                     </label>
                     <div className="relative">
                       <input
+                        aria-label="End date input"
                         type="date"
                         id="end-date-input"
                         value={endDate}
