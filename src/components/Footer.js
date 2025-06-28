@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   FiClock,
-  FiGithub,
   FiCalendar,
   FiHome,
   FiInfo,
@@ -26,21 +25,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const mainLinks = [
-    {
-      name: "Home",
-      href: "/",
-      icon: <FiHome className="w-4 h-4" />,
-    },
-    {
-      name: "About",
-      href: "/about",
-      icon: <FiInfo className="w-4 h-4" />,
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-      icon: <FiMail className="w-4 h-4" />,
-    },
+    { name: "Home", href: "/", icon: <FiHome className="w-4 h-4" /> },
+    { name: "About", href: "/about", icon: <FiInfo className="w-4 h-4" /> },
+    { name: "Contact", href: "/contact", icon: <FiMail className="w-4 h-4" /> },
   ];
 
   const timeCalculators = [
@@ -102,15 +89,38 @@ export default function Footer() {
     },
   ];
 
+  const renderLinkList = (title, links) => (
+    <div className="space-y-3">
+      <p className="text-xs sm:text-sm font-semibold text-blue-300 uppercase tracking-wider">
+        {title}
+      </p>
+      <ul className="space-y-2">
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link
+              href={link.href}
+              className="inline-flex items-center space-x-2 text-sm sm:text-base text-gray-300 hover:text-blue-300 transition-colors"
+            >
+              <span className="text-gray-400 group-hover:text-blue-300 transition-colors">
+                {link.icon}
+              </span>
+              <span>{link.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <footer className="bg-slate-900 border-t border-white/10 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
-          {/* Brand Info - Full width on mobile, first column on desktop */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 text-sm sm:text-base">
+          {/* Brand Section */}
           <div className="col-span-2 md:col-span-1 space-y-4">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-2 group text-xl font-bold w-fit"
+            <Link
+              href="/"
+              className="flex items-center space-x-2 group text-lg sm:text-xl font-bold w-fit"
             >
               <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all duration-200">
                 <Image
@@ -126,115 +136,27 @@ export default function Footer() {
                 TimeTools
               </span>
             </Link>
-            <p className="text-sm text-gray-400">
-              Precise time and date calculation tools for your everyday needs.
+            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xs">
+              TimeTools offers a collection of precise, easy-to-use calculators
+              for managing time, dates, events, and schedules.
             </p>
           </div>
 
-          {/* Navigation Links */}
-          <div className="space-y-4">
-            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
-              Navigation
-            </p>
-            <ul className="space-y-3">
-              {mainLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="flex items-center group py-1.5 -mx-2 px-2 rounded transition-colors hover:bg-white/5 w-full"
-                  >
-                    <span className="text-gray-400 group-hover:text-blue-300 mr-2 transition-colors">
-                      {link.icon}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-blue-300 transition-colors">
-                      {link.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Time Tools */}
-          <div className="space-y-4">
-            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
-              Time Tools
-            </p>
-            <ul className="space-y-3">
-              {timeCalculators.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="flex items-center group py-1.5 -mx-2 px-2 rounded transition-colors hover:bg-white/5 w-full"
-                  >
-                    <span className="text-gray-400 group-hover:text-blue-300 mr-2 transition-colors">
-                      {link.icon}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-blue-300 transition-colors">
-                      {link.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Date Tools - Moves to second row on small screens */}
-          <div className="col-span-2 md:col-span-1 space-y-4">
-            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
-              Date Tools
-            </p>
-            <ul className="space-y-3">
-              {dateCalculators.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="flex items-center group py-1.5 -mx-2 px-2 rounded transition-colors hover:bg-white/5 w-full"
-                  >
-                    <span className="text-gray-400 group-hover:text-blue-300 mr-2 transition-colors">
-                      {link.icon}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-blue-300 transition-colors">
-                      {link.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Special Calculators - Full width on small screens */}
-          <div className="col-span-2 md:col-span-1 space-y-4">
-            <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider">
-              Special Calculators
-            </p>
-            <ul className="space-y-3">
-              {specialCalculators.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="flex items-center group py-1.5 -mx-2 px-2 rounded transition-colors hover:bg-white/5 w-full"
-                  >
-                    <span className="text-gray-400 group-hover:text-blue-300 mr-2 transition-colors">
-                      {link.icon}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-blue-300 transition-colors">
-                      {link.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Link Sections */}
+          {renderLinkList("Navigation", mainLinks)}
+          {renderLinkList("Time Tools", timeCalculators)}
+          {renderLinkList("Date Tools", dateCalculators)}
+          {renderLinkList("Special Calculators", specialCalculators)}
         </div>
 
-        {/* Copyright - Full width */}
-        <div className="mt-10 pt-6 border-t border-white/10 text-center">
-          <p className="text-sm text-gray-600">
+        {/* Footer Bottom */}
+        <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs sm:text-sm">
+          <p className="text-gray-400">
             &copy; {currentYear} TimeTools. All rights reserved.
           </p>
-          <p className="mt-2 flex items-center justify-center text-sm text-gray-600">
-            Made with <FiHeart className="mx-1.5 text-red-400" /> for time enthusiasts
+          <p className="mt-2 flex items-center justify-center text-gray-400">
+            Made with <FiHeart className="mx-1.5 text-red-400" /> for time
+            enthusiasts
           </p>
         </div>
       </div>

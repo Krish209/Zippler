@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Zippler",
   description: "Zippler is a versatile tool for creating and sharing zip files online. Easily compress, encrypt, and manage your files with our user-friendly interface.",
+  other: {
+    "google-site-verification": "x79cEmQ7U8SWq_WOKaSFuCUyoyOQFKxLCtFmrHDyNBo",
+  },
 };
 
 export default function RootLayout({ children }) {
