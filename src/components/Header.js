@@ -86,7 +86,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-3">
+          <nav className="hidden lg:flex space-x-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -130,7 +130,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
             aria-expanded={mobileMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
@@ -141,7 +141,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden min-h-screen bg-slate-800/95 backdrop-blur-lg transition-opacity duration-300">
+        <div className="lg:hidden min-h-screen bg-slate-800/95 backdrop-blur-lg transition-opacity duration-300">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <div key={link.name}>

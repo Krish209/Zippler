@@ -96,7 +96,7 @@ export default function Footer() {
       </p>
       <ul className="space-y-2">
         {links.map((link) => (
-          <li key={link.name}>
+          <li key={link.name} className="relative group">
             <Link
               href={link.href}
               className="inline-flex items-center space-x-2 text-sm sm:text-base text-gray-300 hover:text-blue-300 transition-colors"
