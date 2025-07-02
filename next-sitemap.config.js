@@ -17,7 +17,7 @@ module.exports = {
   // Prevent the default sitemap.xml from being generated as a sitemap
   transform: async (config, path) => {
     if (path === '/sitemap.xml') return null; // Skip the index file
-    
+
     return {
       loc: path,
       changefreq: path === '/' ? 'weekly' : 'monthly',
@@ -26,14 +26,38 @@ module.exports = {
     }
   },
   additionalPaths: async (config) => [
+    await config.transform(config, '/'),
     await config.transform(config, '/about'),
     await config.transform(config, '/contact'),
-    // Add all your calculator pages with custom priorities
-    ...['/age-calculator', '/pet-age-calculator'].map(
-      path => config.transform(config, path, {
-        changefreq: 'weekly',
-        priority: 0.9,
-      })
-    ),
+    await config.transform(config, '/age-calculator', {
+      changefreq: 'weekly',
+      priority: 0.9,
+    }),
+    await config.transform(config, '/pet-age-calculator', {
+      changefreq: 'weekly',
+      priority: 0.9,
+    }),
+    await config.transform(config, '/anniversary-countdown'),
+    await config.transform(config, '/birthday-countdown'),
+    await config.transform(config, '/date-calculator', {
+      changefreq: 'weekly',
+      priority: 0.9,
+    }),
+    await config.transform(config, '/leap-year-checker'),
+    await config.transform(config, '/night-calculator', {
+      changefreq: 'weekly',
+      priority: 0.9,
+    }),
+    await config.transform(config, '/sleep-calculator', {
+      changefreq: 'weekly',
+      priority: 0.9,
+    }),
+    await config.transform(config, '/sleep-checker'),
+    await config.transform(config, '/stopwatch'),
+    await config.transform(config, '/time-calculator', {
+      changefreq: 'weekly',
+      priority: 0.9,
+    }),
+    await config.transform(config, '/weekday-finder'),
   ],
 }
