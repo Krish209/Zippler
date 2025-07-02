@@ -7,3 +7,4 @@ Host: https://zippler-pi.vercel.app
 
 # Sitemaps
 Sitemap: https://zippler-pi.vercel.app/sitemap.xml
+Sitemap: https://zippler-pi.vercel.app/sitemap-0.xml

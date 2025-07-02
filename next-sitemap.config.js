@@ -1,59 +1,39 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://zippler-pi.vercel.app",
-  generateRobotsTxt: true, // (optional) generates robots.txt
+  siteUrl: 'https://zippler-pi.vercel.app',
+  generateRobotsTxt: true,
+  exclude: ['/server-sitemap.xml'], // exclude the default if not using
   robotsTxtOptions: {
     policies: [
       {
-        userAgent: "*",
-        allow: "/",
+        userAgent: '*',
+        allow: '/',
       },
     ],
-    additionalSitemaps: ["https://zippler-pi.vercel.app/sitemap.xml"],
+    additionalSitemaps: [
+      'https://zippler-pi.vercel.app/sitemap-0.xml',
+    ],
   },
-  // Default transformation function
+  // Prevent the default sitemap.xml from being generated as a sitemap
   transform: async (config, path) => {
+    if (path === '/sitemap.xml') return null; // Skip the index file
+    
     return {
-      loc: path, // => this will be exported as https://example.com/path
-      changefreq: config.changefreq,
-      priority: config.priority,
+      loc: path,
+      changefreq: path === '/' ? 'weekly' : 'monthly',
+      priority: path === '/' ? 1.0 : 0.7,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-    };
+    }
   },
-  // Additional configuration for specific pages
   additionalPaths: async (config) => [
-    await config.transform(config, "/about", {
-      changefreq: "monthly",
-      priority: 0.8,
-    }),
-    await config.transform(config, "/contact", {
-      changefreq: "monthly",
-      priority: 0.8,
-    }),
-    // Add all your calculator pages
-    ...[
-      "/age-calculator",
-      "/pet-age-calculator",
-      "/anniversary-countdown",
-      "/birthday-countdown",
-      "/date-calculator",
-      "/leap-year-checker",
-      "/night-calculator",
-      "/sleep-calculator",
-      "/sleep-checker",
-      "/stopwatch",
-      "/time-calculator",
-      "/weekday-finder",
-    ].map((path) =>
-      config.transform(config, path, {
-        changefreq: "weekly",
-        priority:
-          path === "/age-calculator" ||
-          path === "/date-calculator" ||
-          path === "/time-calculator"
-            ? 0.9
-            : 0.8,
+    await config.transform(config, '/about'),
+    await config.transform(config, '/contact'),
+    // Add all your calculator pages with custom priorities
+    ...['/age-calculator', '/pet-age-calculator'].map(
+      path => config.transform(config, path, {
+        changefreq: 'weekly',
+        priority: 0.9,
       })
     ),
   ],
-};
+}
