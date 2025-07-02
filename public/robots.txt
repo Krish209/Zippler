@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zippler-pi.vercel.app
+
+# Sitemaps
+Sitemap: https://zippler-pi.vercel.app/sitemap.xml
