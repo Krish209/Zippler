@@ -133,7 +133,7 @@ export default function Footer() {
                 />
               </div>
               <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-                TimeTools
+                Zippler
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xs">

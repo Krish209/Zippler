@@ -81,7 +81,7 @@ export default function Header() {
               />
             </div>
             <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-              TimeTools
+              Zippler
             </span>
           </Link>
 
