@@ -102,7 +102,7 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(index)}
-                      className={`flex items-center px-4 py-2 rounded-lg transition-all ${activeDropdown === index ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
+                      className={`flex cursor-pointer items-center px-4 py-2 rounded-lg transition-all ${activeDropdown === index ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
                     >
                       <span className="mr-1">{link.name}</span>
                       {activeDropdown === index ? (

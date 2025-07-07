@@ -3,8 +3,8 @@
 
 import Link from "next/link";
 import { FiClock, FiCalendar, FiWatch, FiSunrise, FiSunset, FiPlus, FiStar, FiZap, FiTrendingUp, FiLayers } from "react-icons/fi";
-import { MdOutlineAccessTime, MdOutlineBedtime, MdTimer, MdDateRange } from "react-icons/md";
-import { FaStopwatch, FaRegClock, FaBusinessTime, FaMoon } from "react-icons/fa";
+import { MdOutlineAccessTime, MdOutlineBedtime, MdTimer, MdDateRange, MdEventAvailable } from "react-icons/md";
+import { FaStopwatch, FaRegClock, FaBusinessTime, FaMoon, FaTachometerAlt } from "react-icons/fa";
 import { IoTimeOutline, IoSpeedometerOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -30,7 +30,7 @@ const tools = [
     name: "Date Difference",
     description: "Calculate the difference between two dates in days, weeks, months or years",
     icon: <FiCalendar className="h-6 w-6 text-emerald-400" />,
-    href: "/date-difference",
+    href: "/date-calculator",
     color: "from-emerald-600 to-teal-600"
   },
   {
@@ -48,20 +48,42 @@ const tools = [
     color: "from-red-600 to-pink-600",
     featured: true
   },
+
   {
-    name: "Countdown Timer",
-    description: "Set customizable countdown timers for any duration",
-    icon: <MdTimer className="h-6 w-6 text-purple-400" />,
-    href: "/timer",
-    color: "from-purple-600 to-fuchsia-600"
+    name: "Leap Year Checker",
+    description: "Check if a year is a leap year",
+    icon: <MdEventAvailable className="h-6 w-6 text-purple-400" />,
+    href: "/leap-year-checker",
+    color: "from-purple-600 to-indigo-600",
   },
   {
-    name: "Time Zone Converter",
-    description: "Convert between different time zones instantly",
-    icon: <FaBusinessTime className="h-6 w-6 text-sky-400" />,
-    href: "/timezone-converter",
-    color: "from-sky-600 to-blue-600"
+    name: "Sleep Length Checker",
+    description: "Calculate your total sleep length",
+    icon: <FaMoon className="h-6 w-6 text-teal-400" />,
+    href: "/sleep-length-checker",
+    color: "from-teal-600 to-cyan-600",
   },
+  {
+    name: "Speed Challenge",
+    description: "Test and improve your reaction speed",
+    icon: <FaTachometerAlt className="h-6 w-6 text-pink-400" />,
+    href: "/speed-challenge",
+    color: "from-pink-600 to-red-600",
+  },
+  // {
+  //   name: "Countdown Timer",
+  //   description: "Set customizable countdown timers for any duration",
+  //   icon: <MdTimer className="h-6 w-6 text-purple-400" />,
+  //   href: "/timer",
+  //   color: "from-purple-600 to-fuchsia-600"
+  // },
+  // {
+  //   name: "Time Zone Converter",
+  //   description: "Convert between different time zones instantly",
+  //   icon: <FaBusinessTime className="h-6 w-6 text-sky-400" />,
+  //   href: "/timezone-converter",
+  //   color: "from-sky-600 to-blue-600"
+  // },
   {
     name: "Age Calculator",
     description: "Calculate exact age in years, months and days",
@@ -69,13 +91,13 @@ const tools = [
     href: "/age-calculator",
     color: "from-green-600 to-emerald-600"
   },
-  {
-    name: "Work Hours Calculator",
-    description: "Calculate total work hours between two times",
-    icon: <FaRegClock className="h-6 w-6 text-rose-400" />,
-    href: "/work-hours",
-    color: "from-rose-600 to-pink-600"
-  },
+  // {
+  //   name: "Work Hours Calculator",
+  //   description: "Calculate total work hours between two times",
+  //   icon: <FaRegClock className="h-6 w-6 text-rose-400" />,
+  //   href: "/work-hours",
+  //   color: "from-rose-600 to-pink-600"
+  // },
 ];
 
 const features = [
@@ -376,7 +398,7 @@ export default function Home() {
                       <p className="text-sm text-indigo-300">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-white/80 italic">"{testimonial.quote}"</p>
+                  <p className="text-white/80 italic">&quot;{testimonial.quote}&quot;</p>
                   <div className="mt-4 flex gap-1">
                     {[...Array(5)].map((_, i) => (
                       <FiStar key={i} className="h-4 w-4 text-amber-400 fill-amber-400" />

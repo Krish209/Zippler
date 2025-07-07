@@ -4,6 +4,8 @@
 import Link from 'next/link';
 import { FiClock, FiGithub, FiTwitter, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import logo from "../../public/Z3.png";
+import Image from 'next/image';
 
 const Footer = () => {
   const footerLinks = [
@@ -57,9 +59,23 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and description */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <FiClock className="h-6 w-6 text-indigo-400" />
-              <span className="text-xl font-bold text-white">TimeTools</span>
+            <Link
+              href="/"
+              className="flex items-center space-x-2 group text-lg sm:text-xl font-bold w-fit"
+            >
+              <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all duration-200">
+                <Image
+                  src={logo}
+                  alt="TimeTools Logo"
+                  width={28}
+                  height={28}
+                  className="filter brightness-125 group-hover:scale-105 transition-transform"
+                  priority
+                />
+              </div>
+              <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
+                Zippler
+              </span>
             </Link>
             <p className="text-white/70">
               Precision time calculation tools to help you master your schedule and productivity.
