@@ -107,7 +107,7 @@ export default function GoalCountdownCalculator({ title, content }) {
           "@type": "WebApplication",
           name: title,
           description: "Calculate time remaining until your target date",
-          url: "https://yourdomain.com/goal-countdown",
+          url: "https://zippler-pi.vercel.app/goal-countdown",
         })}
       </script>
 

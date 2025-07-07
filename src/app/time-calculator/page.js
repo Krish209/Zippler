@@ -16,17 +16,17 @@ export const metadata = {
     "12-hour format calculator",
     "24-hour format calculator",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Time Duration Calculator | Precise Time Difference Tool",
     description:
       "Calculate precise duration between any two times in hours, minutes, and seconds",
-    url: "https://yourdomain.com/time-calculator",
+    url: "https://zippler-pi.vercel.app/time-calculator",
     siteName: "Time Tools",
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg",
+        url: "https://zippler-pi.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -39,11 +39,11 @@ export const metadata = {
     card: "summary_large_image",
     title: "Time Duration Calculator",
     description: "Calculate precise duration between any two times",
-    images: ["https://yourdomain.com/og-image.jpg"],
+    images: ["https://zippler-pi.vercel.app/og-image.jpg"],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/time-calculator",
+    canonical: "https://zippler-pi.vercel.app/time-calculator",
   },
 };
 

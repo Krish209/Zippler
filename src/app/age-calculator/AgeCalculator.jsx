@@ -35,7 +35,7 @@ export default function AgeCalculator({ title, content }) {
       }
 
       setError("");
-      
+
       // Calculate age
       let years = now.getFullYear() - birth.getFullYear();
       let months = now.getMonth() - birth.getMonth();
@@ -60,7 +60,7 @@ export default function AgeCalculator({ title, content }) {
         months,
         days,
         hours,
-        minutes
+        minutes,
       });
 
       // Calculate next birthday
@@ -72,12 +72,14 @@ export default function AgeCalculator({ title, content }) {
       if (nextBday < now) {
         nextBday.setFullYear(nextBday.getFullYear() + 1);
       }
-      setNextBirthday(nextBday.toLocaleDateString("en-US", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      }));
+      setNextBirthday(
+        nextBday.toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      );
 
       setIsCalculated(true);
     } else {
@@ -105,9 +107,9 @@ export default function AgeCalculator({ title, content }) {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          name: {title},
+          name: { title },
           description: "Calculate exact age from birth date",
-          url: "https://yourdomain.com/age-calculator",
+          url: "https://zippler-pi.vercel.app/age-calculator",
         })}
       </script>
 
@@ -120,9 +122,7 @@ export default function AgeCalculator({ title, content }) {
                 {title}
               </h1>
             </div>
-            <p className="text-blue-100 text-center mt-2">
-              {content}
-            </p>
+            <p className="text-blue-100 text-center mt-2">{content}</p>
           </div>
 
           {/* Main Content */}
@@ -146,7 +146,7 @@ export default function AgeCalculator({ title, content }) {
                       id="birth-date-input"
                       value={birthDate}
                       onChange={(e) => setBirthDate(e.target.value)}
-                      max={new Date().toISOString().split('T')[0]}
+                      max={new Date().toISOString().split("T")[0]}
                       className="w-full text-base bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-400 focus:border-blue-400
                         [&::-webkit-calendar-picker-indicator]:hidden
                         appearance-none transition-all duration-200 hover:bg-white/15"

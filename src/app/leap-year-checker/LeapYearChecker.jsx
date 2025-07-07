@@ -51,7 +51,7 @@ export default function LeapYearChecker() {
           "@type": "WebApplication",
           name: "Leap Year Checker",
           description: "Check if a year is a leap year",
-          url: "https://yourdomain.com/leap-year-checker",
+          url: "https://zippler-pi.vercel.app/leap-year-checker",
         })}
       </script>
 
@@ -134,7 +134,8 @@ export default function LeapYearChecker() {
                   <div className="flex flex-col items-center justify-center text-center gap-4">
                     <div className="space-y-3">
                       <p className="text-white text-lg sm:text-xl font-medium">
-                        Year <span className="text-blue-300">{checkedYear}</span> is
+                        Year{" "}
+                        <span className="text-blue-300">{checkedYear}</span> is
                       </p>
                       <p
                         className={`text-4xl font-bold ${

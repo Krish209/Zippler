@@ -16,17 +16,17 @@ export const metadata = {
     "years between dates",
     "project timeline calculator",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Date Duration Calculator | Time Between Dates",
     description:
       "Calculate exact duration between two dates in years, months, and days. Perfect for project planning, age calculation, and date difference analysis.",
-    url: "https://yourwebsite.com/date-calculator",
+    url: "https://zippler-pi.vercel.app/date-calculator",
     siteName: "Time Calculation Tools",
     images: [
       {
-        url: "https://yourwebsite.com/date-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/date-calculator-og-image.png",
         width: 1200,
         height: 630,
         alt: "Date Calculator interface showing duration between dates",
@@ -41,11 +41,11 @@ export const metadata = {
     title: "Date Duration Calculator | Time Between Dates",
     description:
       "Calculate exact duration between two dates in years, months, and days. Perfect for project planning, age calculation, and date difference analysis.",
-    images: ["https://yourwebsite.com/date-calculator-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/date-calculator-twitter-image.png"],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/date-calculator",
+    canonical: "https://zippler-pi.vercel.app/date-calculator",
   },
 };
 

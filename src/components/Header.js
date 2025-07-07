@@ -1,30 +1,19 @@
-"use client";
+// components/Header.js
+'use client';
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { FiClock, FiMenu, FiX } from "react-icons/fi";
-import { MdOutlineCalculate } from "react-icons/md";
-import { TbCalendarWeek } from "react-icons/tb";
-import Image from "next/image";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { FiClock, FiMenu, FiX, FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { TbCalendarWeek } from 'react-icons/tb';
+import { MdOutlineCalculate } from 'react-icons/md';
+import { motion, AnimatePresence } from 'framer-motion';
 import logo from "../../public/Z3.png";
+import Image from 'next/image';
 
-export default function Header() {
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
-
-  useEffect(() => {
-  if (mobileMenuOpen) {
-    document.body.classList.add("overflow-hidden");
-  } else {
-    document.body.classList.remove("overflow-hidden");
-  }
-
-  return () => {
-    document.body.classList.remove("overflow-hidden");
-  };
-}, [mobileMenuOpen]);
-
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     {
@@ -62,124 +51,189 @@ export default function Header() {
     { name: "Contact", href: "/contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  const closeAllMenus = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
   return (
-    <header className="bg-slate-900/90 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center space-x-2 group text-lg sm:text-xl font-bold"
-          >
-            <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all">
-              <Image
-                src={logo}
-                alt="TimeTools Logo"
-                width={28}
-                height={28}
-                className="filter brightness-125 group-hover:scale-105 transition-transform"
-              />
-            </div>
-            <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-              Zippler
-            </span>
-          </Link>
+          <div className="flex-shrink-0">
+            <Link
+              href="/"
+              className="flex items-center space-x-2 group text-lg sm:text-xl font-bold w-fit"
+            >
+              <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all duration-200">
+                <Image
+                  src={logo}
+                  alt="TimeTools Logo"
+                  width={28}
+                  height={28}
+                  className="filter brightness-125 group-hover:scale-105 transition-transform"
+                  priority
+                />
+              </div>
+              <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
+                Zippler
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-4">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <div key={link.name} className="relative group">
+          <nav className="hidden md:flex items-center space-x-1">
+            {navLinks.map((link, index) => (
+              <div key={index} className="relative">
+                {link.subLinks ? (
+                  <>
+                    <button
+                      onClick={() => toggleDropdown(index)}
+                      className={`flex items-center px-4 py-2 rounded-lg transition-all ${activeDropdown === index ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
+                    >
+                      <span className="mr-1">{link.name}</span>
+                      {activeDropdown === index ? (
+                        <FiChevronUp className="w-4 h-4" />
+                      ) : (
+                        <FiChevronDown className="w-4 h-4" />
+                      )}
+                    </button>
+
+                    <AnimatePresence>
+                      {activeDropdown === index && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute left-0 mt-2 w-56 origin-top-left rounded-xl bg-slate-800/95 backdrop-blur-lg border border-white/10 shadow-lg overflow-hidden"
+                        >
+                          <div className="py-1">
+                            {link.subLinks.map((subLink, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                href={subLink.href}
+                                className="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors"
+                                onClick={closeAllMenus}
+                              >
+                                {subLink.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </>
+                ) : (
                   <Link
                     href={link.href}
-                    className={`flex items-center px-2 sm:px-3 py-1 sm:py-2 rounded-md text-sm sm:text-base font-medium ${
-                      isActive
-                        ? "text-blue-300 bg-blue-900/20"
-                        : "text-gray-300 hover:text-blue-300 hover:bg-white/5"
-                    }`}
+                    className="px-4 py-2 rounded-lg text-white/80 hover:bg-white/5 hover:text-white transition-all"
+                    onClick={closeAllMenus}
                   >
-                    {link.icon && (
-                      <span className="mr-1 sm:mr-2">{link.icon}</span>
-                    )}
                     {link.name}
                   </Link>
-
-                  {link.subLinks && (
-                    <div className="absolute left-0 mt-2 w-48 sm:w-56 origin-top-left rounded-md bg-slate-800 shadow-lg ring-1 ring-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200">
-                      {link.subLinks.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          href={sub.href}
-                          className={`block px-3 py-2 text-sm sm:text-base ${
-                            pathname === sub.href
-                              ? "bg-blue-900/20 text-blue-300"
-                              : "text-gray-300 hover:bg-white/5 hover:text-blue-300"
-                          }`}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                )}
+              </div>
+            ))}
           </nav>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
-            aria-expanded={mobileMenuOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            {mobileMenuOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
-          </button>
+          <div className="flex md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-white/80 hover:text-white focus:outline-none"
+              aria-label="Main menu"
+            >
+              {mobileMenuOpen ? (
+                <FiX className="h-6 w-6" />
+              ) : (
+                <FiMenu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden min-h-screen bg-slate-800/95 backdrop-blur-lg transition-opacity duration-300">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <div key={link.name}>
-                <Link
-                  href={link.href}
-                  className={`flex items-center px-3 py-1 rounded-md text-base font-medium ${
-                    pathname === link.href
-                      ? "text-blue-300 bg-blue-900/20"
-                      : "text-gray-300 hover:text-blue-300 hover:bg-white/5"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.icon && <span className="mr-3">{link.icon}</span>}
-                  {link.name}
-                </Link>
-                {link.subLinks && (
-                  <div className="pl-8 py-1 space-y-0">
-                    {link.subLinks.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        href={sub.href}
-                        className={`block px-3 py-1 rounded-md text-sm ${
-                          pathname === sub.href
-                            ? "bg-blue-900/20 text-blue-300"
-                            : "text-gray-400 hover:bg-white/5 hover:text-blue-300"
-                        }`}
-                        onClick={() => setMobileMenuOpen(false)}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10 overflow-hidden"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navLinks.map((link, index) => (
+                <div key={index}>
+                  {link.subLinks ? (
+                    <>
+                      <button
+                        onClick={() => toggleDropdown(index)}
+                        className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-left ${activeDropdown === index ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
                       >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+                        <span>{link.name}</span>
+                        {activeDropdown === index ? (
+                          <FiChevronUp className="w-4 h-4" />
+                        ) : (
+                          <FiChevronDown className="w-4 h-4" />
+                        )}
+                      </button>
+
+                      <AnimatePresence>
+                        {activeDropdown === index && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="pl-4 space-y-1"
+                          >
+                            {link.subLinks.map((subLink, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                href={subLink.href}
+                                className="block px-3 py-2 rounded-md text-white/80 hover:bg-white/5 hover:text-white"
+                                onClick={closeAllMenus}
+                              >
+                                {subLink.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="block px-3 py-2 rounded-md text-white/80 hover:bg-white/5 hover:text-white"
+                      onClick={closeAllMenus}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
-}
+};
+
+export default Header;

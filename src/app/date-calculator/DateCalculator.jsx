@@ -90,7 +90,7 @@ export default function DateCalculator() {
           "@type": "WebApplication",
           name: "Date Span Calculator",
           description: "Calculate duration between dates",
-          url: "https://yourdomain.com/date-calculator",
+          url: "https://zippler-pi.vercel.app/date-calculator",
         })}
       </script>
 
@@ -354,7 +354,8 @@ export default function DateCalculator() {
                         <div className="absolute -inset-4 bg-blue-500/10 rounded-full blur-md opacity-20"></div>
                       </div>
                       <p className="mt-4 text-center max-w-xs mx-auto">
-                        Select start and end dates to calculate the duration between them
+                        Select start and end dates to calculate the duration
+                        between them
                       </p>
                     </div>
                   )}

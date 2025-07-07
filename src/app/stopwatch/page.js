@@ -13,17 +13,17 @@ export const metadata = {
     "lap timer",
     "precision timing",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Precision Stopwatch | Time Tracking Tool",
     description:
       "Accurate stopwatch with lap timing functionality. Track time with millisecond precision.",
-    url: "https://yourwebsite.com/stopwatch",
+    url: "https://zippler-pi.vercel.app/stopwatch",
     siteName: "Your App Name",
     images: [
       {
-        url: "https://yourwebsite.com/stopwatch-og-image.png",
+        url: "https://zippler-pi.vercel.app/stopwatch-og-image.png",
         width: 1200,
         height: 630,
         alt: "Stopwatch Interface Preview",
@@ -38,11 +38,11 @@ export const metadata = {
     title: "Precision Stopwatch | Time Tracking Tool",
     description:
       "Accurate stopwatch with lap timing functionality. Track time with millisecond precision.",
-    images: ["https://yourwebsite.com/stopwatch-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/stopwatch-twitter-image.png"],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/stopwatch",
+    canonical: "https://zippler-pi.vercel.app/stopwatch",
   },
 };
 

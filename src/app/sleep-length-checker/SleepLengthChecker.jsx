@@ -69,7 +69,7 @@ export default function SleepLengthChecker() {
           "@type": "WebApplication",
           name: "Sleep Length Calculator",
           description: "Calculate your sleep duration and cycles",
-          url: "https://yourdomain.com/sleep-calculator",
+          url: "https://zippler-pi.vercel.app/sleep-calculator",
         })}
       </script>
 

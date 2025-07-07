@@ -16,17 +16,17 @@ export const metadata = {
     "special date countdown",
     "anniversary reminder",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Anniversary Countdown Calculator | Days Until Your Special Date",
     description:
       "Track exactly how much time remains until your anniversary with our countdown calculator. See days, weeks, and months until your next celebration.",
-    url: "https://yourwebsite.com/anniversary-countdown",
+    url: "https://zippler-pi.vercel.app/anniversary-countdown",
     siteName: "Special Date Tools",
     images: [
       {
-        url: "https://yourwebsite.com/anniversary-countdown-og-image.png",
+        url: "https://zippler-pi.vercel.app/anniversary-countdown-og-image.png",
         width: 1200,
         height: 630,
         alt: "Anniversary Countdown Calculator showing days until celebration",
@@ -41,11 +41,13 @@ export const metadata = {
     title: "Anniversary Countdown Calculator | Days Until Your Special Date",
     description:
       "Track exactly how much time remains until your anniversary with our countdown calculator. See days, weeks, and months until your next celebration.",
-    images: ["https://yourwebsite.com/anniversary-countdown-twitter-image.png"],
+    images: [
+      "https://zippler-pi.vercel.app/anniversary-countdown-twitter-image.png",
+    ],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/anniversary-countdown",
+    canonical: "https://zippler-pi.vercel.app/anniversary-countdown",
   },
 };
 

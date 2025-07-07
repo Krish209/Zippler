@@ -16,17 +16,17 @@ export const metadata = {
     "next birthday calculator",
     "birth date age calculator",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Age Calculator | Find Your Exact Age in Years, Months, Days",
     description:
       "Calculate your precise age including years, months, and days since birth. Discover when your next birthday will be with our accurate age calculator tool.",
-    url: "https://yourwebsite.com/age-calculator",
+    url: "https://zippler-pi.vercel.app/age-calculator",
     siteName: "Date & Time Tools",
     images: [
       {
-        url: "https://yourwebsite.com/age-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/age-calculator-og-image.png",
         width: 1200,
         height: 630,
         alt: "Age Calculator interface showing detailed age breakdown",
@@ -41,11 +41,11 @@ export const metadata = {
     title: "Age Calculator | Find Your Exact Age in Years, Months, Days",
     description:
       "Calculate your precise age including years, months, and days since birth. Discover when your next birthday will be with our accurate age calculator tool.",
-    images: ["https://yourwebsite.com/age-calculator-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/age-calculator-twitter-image.png"],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/age-calculator",
+    canonical: "https://zippler-pi.vercel.app/age-calculator",
   },
 };
 

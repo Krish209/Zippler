@@ -16,17 +16,17 @@ export const metadata = {
     "special day countdown",
     "birthday tracker",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Birthday Countdown Calculator | Days Until Your Special Day",
     description:
       "Track exactly how much time remains until your birthday with our countdown calculator. See days, weeks, and months until your next celebration.",
-    url: "https://yourwebsite.com/birthday-countdown",
+    url: "https://zippler-pi.vercel.app/birthday-countdown",
     siteName: "Special Day Tools",
     images: [
       {
-        url: "https://yourwebsite.com/birthday-countdown-og-image.png",
+        url: "https://zippler-pi.vercel.app/birthday-countdown-og-image.png",
         width: 1200,
         height: 630,
         alt: "Birthday Countdown Calculator showing days until celebration",
@@ -41,11 +41,13 @@ export const metadata = {
     title: "Birthday Countdown Calculator | Days Until Your Special Day",
     description:
       "Track exactly how much time remains until your birthday with our countdown calculator. See days, weeks, and months until your next celebration.",
-    images: ["https://yourwebsite.com/birthday-countdown-twitter-image.png"],
+    images: [
+      "https://zippler-pi.vercel.app/birthday-countdown-twitter-image.png",
+    ],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/birthday-countdown",
+    canonical: "https://zippler-pi.vercel.app/birthday-countdown",
   },
 };
 

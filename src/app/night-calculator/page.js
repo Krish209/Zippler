@@ -16,17 +16,17 @@ export const metadata = {
     "how many nights between dates",
     "travel planning tool",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Night Calculator | Count Nights Between Dates",
     description:
       "Calculate the exact number of nights between two dates. Perfect for travel planning, hotel bookings, and vacation duration calculations.",
-    url: "https://yourwebsite.com/night-calculator",
+    url: "https://zippler-pi.vercel.app/night-calculator",
     siteName: "Travel Planning Tools",
     images: [
       {
-        url: "https://yourwebsite.com/night-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/night-calculator-og-image.png",
         width: 1200,
         height: 630,
         alt: "Night Calculator interface showing date range and night count",
@@ -41,11 +41,13 @@ export const metadata = {
     title: "Night Calculator | Count Nights Between Dates",
     description:
       "Calculate the exact number of nights between two dates. Perfect for travel planning, hotel bookings, and vacation duration calculations.",
-    images: ["https://yourwebsite.com/night-calculator-twitter-image.png"],
+    images: [
+      "https://zippler-pi.vercel.app/night-calculator-twitter-image.png",
+    ],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/night-calculator",
+    canonical: "https://zippler-pi.vercel.app/night-calculator",
   },
 };
 

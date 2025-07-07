@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { FiCalendar } from "react-icons/fi";
 
-export default function DayOfWeekFinder() {
+export default function DayOfWeekFinder({ title, content }) {
   const [inputDate, setInputDate] = useState("");
   const [dayOfWeek, setDayOfWeek] = useState("");
   const [error, setError] = useState("");
@@ -49,7 +49,7 @@ export default function DayOfWeekFinder() {
           "@type": "WebApplication",
           name: "Day of Week Finder",
           description: "Find what day of the week a particular date fell on",
-          url: "https://yourdomain.com/day-finder",
+          url: "https://zippler-pi.vercel.app/day-finder",
         })}
       </script>
 
@@ -60,7 +60,7 @@ export default function DayOfWeekFinder() {
             <div className="flex items-center justify-center gap-3">
               <FiCalendar className="h-8 w-8" />
               <h1 className="text-2xl sm:text-3xl font-bold text-center">
-                Day of the Week Finder
+                {title}
               </h1>
             </div>
             <p className="text-blue-100 text-center mt-2">
@@ -81,7 +81,7 @@ export default function DayOfWeekFinder() {
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/80 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-                    Enter any date in history
+                    {content}
                   </label>
                   <div className="relative">
                     <input

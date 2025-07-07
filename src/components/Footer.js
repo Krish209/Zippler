@@ -1,165 +1,138 @@
-"use client";
+// components/Footer.js
+'use client';
 
-import Link from "next/link";
-import {
-  FiClock,
-  FiCalendar,
-  FiHome,
-  FiInfo,
-  FiMail,
-  FiHeart,
-} from "react-icons/fi";
-import {
-  MdOutlinePets,
-  MdOutlineCake,
-  MdOutlineEvent,
-  MdOutlineBedtime,
-  MdOutlineAccessTime,
-} from "react-icons/md";
-import Image from "next/image";
-import logo from "../../public/Z3.png";
-import { BsStopwatch } from "react-icons/bs";
-import { TbCalendarWeek } from "react-icons/tb";
+import Link from 'next/link';
+import { FiClock, FiGithub, FiTwitter, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
-export default function Footer() {
+const Footer = () => {
+  const footerLinks = [
+    {
+      title: "Time Tools",
+      links: [
+        { name: "Time Calculator", href: "/time-calculator" },
+        { name: "Stopwatch", href: "/stopwatch" },
+        { name: "Sleep Calculator", href: "/sleep-calculator" },
+      ],
+    },
+    {
+      title: "Date Tools",
+      links: [
+        { name: "Date Calculator", href: "/date-calculator" },
+        { name: "Weekday Finder", href: "/weekday-finder" },
+        { name: "Leap Year Checker", href: "/leap-year-checker" },
+      ],
+    },
+    {
+      title: "Special Calculators",
+      links: [
+        { name: "Age Calculator", href: "/age-calculator" },
+        { name: "Pet Age Calculator", href: "/pet-age-calculator" },
+        { name: "Anniversary Countdown", href: "/anniversary-countdown" },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Contact", href: "/contact" },
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Service", href: "/terms" },
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    { name: "GitHub", icon: <FiGithub />, href: "https://github.com" },
+    { name: "Twitter", icon: <FiTwitter />, href: "https://twitter.com" },
+    { name: "LinkedIn", icon: <FiLinkedin />, href: "https://linkedin.com" },
+    { name: "Email", icon: <FiMail />, href: "mailto:contact@timetools.com" },
+  ];
+
   const currentYear = new Date().getFullYear();
 
-  const mainLinks = [
-    { name: "Home", href: "/", icon: <FiHome className="w-4 h-4" /> },
-    { name: "About", href: "/about", icon: <FiInfo className="w-4 h-4" /> },
-    { name: "Contact", href: "/contact", icon: <FiMail className="w-4 h-4" /> },
-  ];
-
-  const timeCalculators = [
-    {
-      name: "Time Calculator",
-      href: "/time-calculator",
-      icon: <FiClock className="w-4 h-4" />,
-    },
-    {
-      name: "Stopwatch",
-      href: "/stopwatch",
-      icon: <BsStopwatch className="w-4 h-4" />,
-    },
-    {
-      name: "Sleep Calculator",
-      href: "/sleep-calculator",
-      icon: <MdOutlineBedtime className="w-4 h-4" />,
-    },
-  ];
-
-  const dateCalculators = [
-    {
-      name: "Date Calculator",
-      href: "/date-calculator",
-      icon: <FiCalendar className="w-4 h-4" />,
-    },
-    {
-      name: "Weekday Finder",
-      href: "/weekday-finder",
-      icon: <TbCalendarWeek className="w-4 h-4" />,
-    },
-    {
-      name: "Leap Year Checker",
-      href: "/leap-year-checker",
-      icon: <MdOutlineEvent className="w-4 h-4" />,
-    },
-  ];
-
-  const specialCalculators = [
-    {
-      name: "Age Calculator",
-      href: "/age-calculator",
-      icon: <MdOutlineAccessTime className="w-4 h-4" />,
-    },
-    {
-      name: "Pet Age Calculator",
-      href: "/pet-age-calculator",
-      icon: <MdOutlinePets className="w-4 h-4" />,
-    },
-    {
-      name: "Anniversary Countdown",
-      href: "/anniversary-countdown",
-      icon: <MdOutlineEvent className="w-4 h-4" />,
-    },
-    {
-      name: "Birthday Countdown",
-      href: "/birthday-countdown",
-      icon: <MdOutlineCake className="w-4 h-4" />,
-    },
-  ];
-
-  const renderLinkList = (title, links) => (
-    <div className="space-y-3">
-      <p className="text-xs sm:text-sm font-semibold text-blue-300 uppercase tracking-wider">
-        {title}
-      </p>
-      <ul className="space-y-2">
-        {links.map((link) => (
-          <li key={link.name} className="relative group">
-            <Link
-              href={link.href}
-              className="inline-flex items-center space-x-2 text-sm sm:text-base text-gray-300 hover:text-blue-300 transition-colors"
-            >
-              <span className="text-gray-400 group-hover:text-blue-300 transition-colors">
-                {link.icon}
-              </span>
-              <span>{link.name}</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-
   return (
-    <footer className="bg-slate-900 border-t border-white/10 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 text-sm sm:text-base">
-          {/* Brand Section */}
-          <div className="col-span-2 md:col-span-1 space-y-4">
-            <Link
-              href="/"
-              className="flex items-center space-x-2 group text-lg sm:text-xl font-bold w-fit"
-            >
-              <div className="p-1.5 bg-blue-600/20 rounded-lg border border-blue-400/30 group-hover:border-blue-300 transition-all duration-200">
-                <Image
-                  src={logo}
-                  alt="TimeTools Logo"
-                  width={28}
-                  height={28}
-                  className="filter brightness-125 group-hover:scale-105 transition-transform"
-                  priority
-                />
-              </div>
-              <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-                Zippler
-              </span>
+    <footer className="bg-gradient-to-br from-slate-900 to-indigo-900 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Logo and description */}
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-2">
+              <FiClock className="h-6 w-6 text-indigo-400" />
+              <span className="text-xl font-bold text-white">TimeTools</span>
             </Link>
-            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xs">
-              TimeTools offers a collection of precise, easy-to-use calculators
-              for managing time, dates, events, and schedules.
+            <p className="text-white/70">
+              Precision time calculation tools to help you master your schedule and productivity.
             </p>
+            
+            {/* Social links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -3 }}
+                  className="text-white/60 hover:text-indigo-400 transition-colors"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </div>
           </div>
 
-          {/* Link Sections */}
-          {renderLinkList("Navigation", mainLinks)}
-          {renderLinkList("Time Tools", timeCalculators)}
-          {renderLinkList("Date Tools", dateCalculators)}
-          {renderLinkList("Special Calculators", specialCalculators)}
+          {/* Footer links */}
+          {footerLinks.map((column, index) => (
+            <div key={index} className="space-y-4">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+                {column.title}
+              </h3>
+              <ul className="space-y-2">
+                {column.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      href={link.href}
+                      className="text-white/60 hover:text-indigo-300 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Footer Bottom */}
-        <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs sm:text-sm">
-          <p className="text-gray-400">
+        {/* Bottom section */}
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-white/60 text-sm">
             &copy; {currentYear} TimeTools. All rights reserved.
           </p>
-          <p className="mt-2 flex items-center justify-center text-gray-400">
-            Made with <FiHeart className="mx-1.5 text-red-400" /> for time
-            enthusiasts
-          </p>
+          
+          <div className="flex items-center mt-4 md:mt-0 space-x-6">
+            <Link href="/privacy" className="text-white/60 hover:text-indigo-300 text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-white/60 hover:text-indigo-300 text-sm transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="text-white/60 hover:text-indigo-300 text-sm transition-colors">
+              Cookie Policy
+            </Link>
+          </div>
         </div>
+
+        {/* Made with love */}
+        <div className="mt-8 text-center text-white/50 text-sm flex items-center justify-center gap-1">
+          Made with <FiHeart className="text-rose-500" /> for time
+            enthusiasts
+        </div>
+        
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

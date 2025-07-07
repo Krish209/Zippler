@@ -16,17 +16,17 @@ export const metadata = {
     "animal age calculator",
     "pet lifespan calculator",
   ],
-  // authors: [{ name: 'Your Name', url: 'https://yourwebsite.com' }],
+  // authors: [{ name: 'Your Name', url: 'https://zippler-pi.vercel.app' }],
 
   openGraph: {
     title: "Pet Age Calculator | Determine Your Pet's Exact Age",
     description:
       "Calculate your pet's age in years, months, and days. Convert pet years to human years for dogs and cats with our accurate age calculator.",
-    url: "https://yourwebsite.com/pet-age-calculator",
+    url: "https://zippler-pi.vercel.app/pet-age-calculator",
     siteName: "Pet Care Tools",
     images: [
       {
-        url: "https://yourwebsite.com/pet-age-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/pet-age-calculator-og-image.png",
         width: 1200,
         height: 630,
         alt: "Pet Age Calculator interface showing dog and cat age conversion",
@@ -41,11 +41,13 @@ export const metadata = {
     title: "Pet Age Calculator | Determine Your Pet's Exact Age",
     description:
       "Calculate your pet's age in years, months, and days. Convert pet years to human years for dogs and cats with our accurate age calculator.",
-    images: ["https://yourwebsite.com/pet-age-calculator-twitter-image.png"],
+    images: [
+      "https://zippler-pi.vercel.app/pet-age-calculator-twitter-image.png",
+    ],
   },
 
   alternates: {
-    canonical: "https://yourwebsite.com/pet-age-calculator",
+    canonical: "https://zippler-pi.vercel.app/pet-age-calculator",
   },
 };
 

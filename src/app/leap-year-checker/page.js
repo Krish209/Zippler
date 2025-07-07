@@ -11,20 +11,20 @@ export const metadata = {
     "leap year calculator",
     "leap year test",
     "year validator",
-    '366 day year',
-    'Gregorian calendar checker',
+    "366 day year",
+    "Gregorian calendar checker",
   ],
-  // authors: [{ name: "Your Name", url: "https://yourdomain.com" }],
+  // authors: [{ name: "Your Name", url: "https://zippler-pi.vercel.app" }],
 
   openGraph: {
     title: "Leap Year Checker | Verify Any Year Online",
     description:
       "Instantly check if any year is a leap year with our accurate verification tool. Understand leap year rules and see why February gets an extra day every 4 years.",
-    url: "https://yourdomain.com/leap-year",
+    url: "https://zippler-pi.vercel.app/leap-year",
     siteName: "Your Site Name",
     images: [
       {
-        url: "https://yourdomain.com/images/leap-year-og.jpg",
+        url: "https://zippler-pi.vercel.app/images/leap-year-og.jpg",
         width: 1200,
         height: 630,
         alt: "Leap Year Checker Tool Preview",
@@ -39,11 +39,11 @@ export const metadata = {
     title: "Leap Year Checker | Verify Any Year Online",
     description:
       "Instantly check if any year is a leap year with our free online tool",
-    images: ["https://yourdomain.com/images/leap-year-twitter.jpg"],
+    images: ["https://zippler-pi.vercel.app/images/leap-year-twitter.jpg"],
   },
 
   alternates: {
-    canonical: "https://yourdomain.com/leap-year",
+    canonical: "https://zippler-pi.vercel.app/leap-year",
   },
 };
 

@@ -3,10 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const baseUrl = "https://zippler-pi.vercel.app";
-  const lastMod = "2025-07-02"; // Static last modified date
+  const lastMod = "2025-07-07"; // Static last modified date
 
   const pages = [
     "",
+    "calc",
     "about",
     "contact",
     "age-calculator",
@@ -17,17 +18,27 @@ export async function GET() {
     "leap-year-checker",
     "night-calculator",
     "sleep-calculator",
-    "sleep-checker",
+    "sleep-length-checker",
     "stopwatch",
+    "speed-challenge",
     "time-calculator",
+    "birthday-day-finder",
     "weekday-finder",
+    "sun-calculator",
+    "moon-calculator",
   ];
 
   const xmlItems = pages
     .map((slug) => {
       const loc = slug ? `${baseUrl}/${slug}` : baseUrl;
       const priority = ["", "about", "contact"].includes(slug) ? "1.0" : "0.7";
-      return `<url><loc>${loc}</loc><lastmod>${lastMod}</lastmod><changefreq>weekly</changefreq><priority>${priority}</priority></url>`;
+      return `
+    <url>
+      <loc>${loc}</loc>
+      <lastmod>${lastMod}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>${priority}</priority>
+    </url>`;
     })
     .join("");
 
@@ -38,9 +49,6 @@ export async function GET() {
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>${baseUrl}</loc><lastmod>${lastMod}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>${baseUrl}/about</loc><lastmod>${lastMod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>${baseUrl}/contact</loc><lastmod>${lastMod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   ${xmlItems}
 </urlset>`;
 

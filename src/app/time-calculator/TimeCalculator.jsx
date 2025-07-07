@@ -157,7 +157,7 @@ export default function TimeCalculator() {
           "@type": "WebApplication",
           name: "Time Duration Calculator",
           description: "Calculate duration between times",
-          url: "https://yourdomain.com/time-calculator",
+          url: "https://zippler-pi.vercel.app/time-calculator",
         })}
       </script>
 
