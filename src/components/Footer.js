@@ -122,26 +122,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-12 pt-8 text-center border-t border-white/10 justify-between items-center">
           <p className="text-white/60 text-sm">
-            &copy; {currentYear} TimeTools. All rights reserved.
+            &copy; {currentYear} Zippler. All rights reserved.
           </p>
-          
-          <div className="flex items-center mt-4 md:mt-0 space-x-6">
-            <Link href="/privacy" className="text-white/60 hover:text-indigo-300 text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-white/60 hover:text-indigo-300 text-sm transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/cookies" className="text-white/60 hover:text-indigo-300 text-sm transition-colors">
-              Cookie Policy
-            </Link>
-          </div>
         </div>
 
         {/* Made with love */}
-        <div className="mt-8 text-center text-white/50 text-sm flex items-center justify-center gap-1">
+        <div className="mt-4 text-center text-white/50 text-sm flex items-center justify-center gap-1">
           Made with <FiHeart className="text-rose-500" /> for time
             enthusiasts
         </div>

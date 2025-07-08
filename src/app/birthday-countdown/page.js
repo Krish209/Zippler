@@ -1,3 +1,5 @@
+// app/birthday-countdown/page.js
+
 // This is a server component (no 'use client')
 
 import GoalCountdownCalculator from "@/components/GoalCountDownCalc";
@@ -51,6 +53,6 @@ export const metadata = {
   },
 };
 
-export default function BirthdayCalculatorPage() {
+export default function BirthdayCountdownPage() {
   return <GoalCountdownCalculator title="Birthday" content="birthday" />;
 }

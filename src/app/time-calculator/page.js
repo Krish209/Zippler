@@ -1,3 +1,5 @@
+// app/time-calculator/page.js
+
 // This is a server component (no 'use client')
 
 import TimeCalculator from "../time-calculator/TimeCalculator";

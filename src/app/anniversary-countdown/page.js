@@ -1,4 +1,6 @@
-// This is a server component (no 'use client')
+// app/anniversary-countdown/page.js
+// 
+// // This is a server component (no 'use client')
 
 import GoalCountdownCalculator from "@/components/GoalCountDownCalc";
 
@@ -51,6 +53,6 @@ export const metadata = {
   },
 };
 
-export default function AnniversaryCalcualtorPage() {
+export default function AnniversaryCountdownPage() {
   return <GoalCountdownCalculator title="Anniversary" content="anniversary" />;
 }

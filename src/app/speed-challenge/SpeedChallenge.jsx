@@ -1,4 +1,5 @@
-// app/speed-challenge/page.js
+// app/speed-challenge/SpeedChallenge.jsx
+
 'use client';
 
 import { useState, useEffect, useRef } from 'react';

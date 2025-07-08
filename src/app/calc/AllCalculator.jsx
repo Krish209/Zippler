@@ -1,4 +1,5 @@
-// app/page.tsx
+// app/calc/AllCalculator.jsx
+
 "use client";
 
 import Link from "next/link";
@@ -40,7 +41,7 @@ const tools = [
   },
 ];
 
-export default function HomePage() {
+export default function AllCalculator() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-6 flex items-center justify-center">
       <div className="w-full max-w-6xl space-y-12">

@@ -1,4 +1,7 @@
-import ContactPage from './Contact';
+// app/contact/page.js
+// This is a server component (no 'use client')
+
+import Contact from './Contact';
 
 export const metadata = {
   title: "Contact Us | Time Tools",
@@ -43,6 +46,6 @@ export const metadata = {
 };
 
 
-export default function Contact() {
-    return <ContactPage />;
+export default function ContactPage() {
+    return <Contact />;
 }

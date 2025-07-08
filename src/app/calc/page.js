@@ -1,6 +1,8 @@
+// app/calc/page.js
+
 // This is a server component (no 'use client')
 
-import AllCalc from "./allcal";
+import AllCalculator from "./AllCalculator";
 
 export const metadata = {
   title: "Time & Date Toolkit | Smart Time Calculators for Everyday Use",
@@ -46,6 +48,6 @@ export const metadata = {
 };
 
 
-export default function BirthdayCalculatorPage() {
-  return <AllCalc />;
+export default function AllCalculatorPage() {
+  return <AllCalculator />;
 }

@@ -1,6 +1,8 @@
+// app/moon-calculator/page.js
+
 // This is a server component (no 'use client')
 
-import MoonCalculator from "./MoonCalc";
+import MoonCalculator from "./MoonCalculator";
 
 export const metadata = {
   title: "Moon Calculator | Moonrise, Moonset, Phase & Illumination",

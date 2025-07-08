@@ -1,3 +1,5 @@
+// app/birthday-day-finder/page.js
+
 // This is a server component (no 'use client')
 
 import DayOfWeekFinder from "../weekday-finder/WeekdayFinder";

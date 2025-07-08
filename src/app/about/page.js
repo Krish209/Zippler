@@ -1,6 +1,8 @@
+// app/about/page.js
+
 // This is a server component (no 'use client')
 
-import AboutPage from './AboutUs'
+import AboutUs from "./AboutUs";
 
 export const metadata = {
   title: "About Time Tools | Meet the Team Behind the Time Calculators",
@@ -52,6 +54,6 @@ export const metadata = {
 };
 
 
-export default function About() {
-    return <AboutPage />;
+export default function AboutPage() {
+    return <AboutUs />;
 }

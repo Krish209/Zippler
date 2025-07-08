@@ -1,14 +1,20 @@
 // components/Header.js
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { FiClock, FiMenu, FiX, FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { TbCalendarWeek } from 'react-icons/tb';
-import { MdOutlineCalculate } from 'react-icons/md';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  FiClock,
+  FiMenu,
+  FiX,
+  FiChevronDown,
+  FiChevronUp,
+} from "react-icons/fi";
+import { TbCalendarWeek } from "react-icons/tb";
+import { MdOutlineCalculate } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/Z3.png";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,11 +58,19 @@ const Header = () => {
   ];
 
   useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleDropdown = (index) => {
@@ -69,7 +83,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-slate-900/95 backdrop-blur-md border-b border-white/10"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -102,7 +122,11 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(index)}
-                      className={`flex cursor-pointer items-center px-4 py-2 rounded-lg transition-all ${activeDropdown === index ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
+                      className={`flex cursor-pointer items-center px-4 py-2 rounded-lg transition-all ${
+                        activeDropdown === index
+                          ? "bg-white/10 text-white"
+                          : "text-white/80 hover:bg-white/5 hover:text-white"
+                      }`}
                     >
                       <span className="mr-1">{link.name}</span>
                       {activeDropdown === index ? (
@@ -172,10 +196,10 @@ const Header = () => {
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10 overflow-hidden"
+            className="md:hidden min-h-screen bg-slate-900/95 backdrop-blur-lg border-t border-white/10 overflow-hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link, index) => (
@@ -184,7 +208,11 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => toggleDropdown(index)}
-                        className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-left ${activeDropdown === index ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
+                        className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-left ${
+                          activeDropdown === index
+                            ? "bg-white/10 text-white"
+                            : "text-white/80 hover:bg-white/5 hover:text-white"
+                        }`}
                       >
                         <span>{link.name}</span>
                         {activeDropdown === index ? (
@@ -198,7 +226,7 @@ const Header = () => {
                         {activeDropdown === index && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
+                            animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
                             className="pl-4 space-y-1"

@@ -1,5 +1,7 @@
+// app/sun-calculator/page.js
+
 // This is a server component (no 'use client')
-import SunCalculator from "./SunCalc";
+import SunCalculator from "./SunCalculator";
 
 export const metadata = {
   title: "Sun Calculator | Sunrise, Sunset & Solar Noon Times by Location",

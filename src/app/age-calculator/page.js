@@ -1,3 +1,5 @@
+// app/age-calculator/page.js
+
 // This is a server component (no 'use client')
 
 import AgeCalculator from "./AgeCalculator";

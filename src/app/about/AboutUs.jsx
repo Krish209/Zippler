@@ -1,11 +1,12 @@
-// app/about/page.js
+// app/about/AboutUs.jsx
+
 'use client';
 
 import { motion } from 'framer-motion';
 import { FiClock, FiUsers, FiCode, FiHeart, FiAward } from 'react-icons/fi';
 import { FaRegLightbulb } from 'react-icons/fa';
 
-export default function AboutPage() {
+export default function AboutUs() {
   const team = [
     {
       name: "Alex Johnson",

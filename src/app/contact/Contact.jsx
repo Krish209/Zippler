@@ -1,11 +1,12 @@
-// app/contact/page.js
+// app/contact/Contact.jsx
+
 'use client';
 
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiClock } from 'react-icons/fi';
 import { useState } from 'react';
 
-export default function ContactPage() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

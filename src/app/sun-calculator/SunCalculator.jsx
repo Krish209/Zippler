@@ -1,3 +1,5 @@
+// app/sun-calculator/SunCalculator.jsx
+
 "use client";
 
 import { useEffect, useState } from "react";

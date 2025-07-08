@@ -1,4 +1,7 @@
+// app/leap-year-checker/page.js
+
 // This is a server component (no 'use client')
+
 import LeapYearChecker from "./LeapYearChecker";
 
 export const metadata = {

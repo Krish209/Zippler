@@ -1,3 +1,5 @@
+// app/stopwatch/Stopwatch.jsx
+
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { FiPlay, FiPause, FiRotateCw, FiFlag } from "react-icons/fi";

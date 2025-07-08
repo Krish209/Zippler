@@ -1,3 +1,5 @@
+// app/sleep-calculator/page.js
+
 // This is a server component (no 'use client')
 
 import SleepTimeCalculator from "./SleepTimeCalculator";

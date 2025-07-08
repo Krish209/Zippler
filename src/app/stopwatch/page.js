@@ -1,3 +1,5 @@
+// app/stopwatch/page.js
+
 // This is a server component (no 'use client')
 
 import Stopwatch from "./Stopwatch";
