@@ -11,7 +11,8 @@ import { MdOutlineBedtime, MdSchedule } from "react-icons/md";
 const tools = [
   {
     name: "Sleep Time Calculator",
-    description: "Find optimal bedtimes or wake-up times based on sleep cycles.",
+    description:
+      "Find optimal bedtimes or wake-up times based on sleep cycles.",
     href: "/sleep-time",
     icon: <MdOutlineBedtime className="w-6 h-6 text-indigo-300" />,
   },
@@ -35,7 +36,8 @@ const tools = [
   },
   {
     name: "Stopwatch",
-    description: "A clean, responsive stopwatch with pause/reset functionality.",
+    description:
+      "A clean, responsive stopwatch with pause/reset functionality.",
     href: "/stopwatch",
     icon: <FaStopwatch className="w-6 h-6 text-pink-300" />,
   },
@@ -43,7 +45,7 @@ const tools = [
 
 export default function AllCalculator() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-6 flex items-center justify-center">
+    <main className="min-h-screen py-20 bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-6 flex items-center justify-center">
       <div className="w-full max-w-6xl space-y-12">
         {/* Animated Header */}
         <div className="text-center space-y-3 relative">
@@ -51,7 +53,8 @@ export default function AllCalculator() {
             Time & Date Toolkit
           </h1>
           <p className="text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
-            Intuitive tools to help you manage your time and dates efficiently — fast, focused, and elegant.
+            Intuitive tools to help you manage your time and dates efficiently —
+            fast, focused, and elegant.
           </p>
         </div>
 
@@ -72,7 +75,9 @@ export default function AllCalculator() {
                     {tool.name}
                   </h2>
                 </div>
-                <p className="text-sm text-white/60 leading-snug">{tool.description}</p>
+                <p className="text-sm text-white/60 leading-snug">
+                  {tool.description}
+                </p>
 
                 {/* Shimmer border glow */}
                 <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-indigo-400/30 transition-all duration-300" />

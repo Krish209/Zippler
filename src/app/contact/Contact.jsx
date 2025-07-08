@@ -1,41 +1,43 @@
 // app/contact/Contact.jsx
 
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiSend, FiClock } from 'react-icons/fi';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { FiMail, FiPhone, FiMapPin, FiSend, FiClock } from "react-icons/fi";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitMessage('Thank you for your message! We will get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
-      
+      setSubmitMessage(
+        "Thank you for your message! We will get back to you soon."
+      );
+      setFormData({ name: "", email: "", message: "" });
+
       // Clear success message after 5 seconds
-      setTimeout(() => setSubmitMessage(''), 5000);
+      setTimeout(() => setSubmitMessage(""), 5000);
     }, 1500);
   };
 
@@ -44,30 +46,30 @@ export default function Contact() {
       icon: <FiMail className="h-6 w-6 text-indigo-400" />,
       title: "Email Us",
       details: "support@timetools.com",
-      action: "mailto:support@timetools.com"
+      action: "mailto:support@timetools.com",
     },
     {
       icon: <FiPhone className="h-6 w-6 text-blue-400" />,
       title: "Call Us",
       details: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
+      action: "tel:+15551234567",
     },
     {
       icon: <FiMapPin className="h-6 w-6 text-emerald-400" />,
       title: "Visit Us",
       details: "123 Time Street, Chronoville",
-      action: "https://maps.google.com"
+      action: "https://maps.google.com",
     },
     {
       icon: <FiClock className="h-6 w-6 text-amber-400" />,
       title: "Support Hours",
       details: "Mon-Fri: 9AM - 5PM (GMT)",
-      action: null
-    }
+      action: null,
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-900">
+    <div className="min-h-screen py-20 bg-gradient-to-br from-slate-900 to-indigo-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -80,7 +82,8 @@ export default function Contact() {
               Contact <span className="text-indigo-400">Time Tools</span>
             </h1>
             <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
-              We'd love to hear from you! Reach out for support, feedback, or partnerships.
+              We'd love to hear from you! Reach out for support, feedback, or
+              partnerships.
             </p>
           </motion.div>
         </div>
@@ -106,15 +109,17 @@ export default function Contact() {
                   <div className="p-2 bg-white/10 rounded-lg">
                     {method.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-white">{method.title}</h3>
+                  <h3 className="text-lg font-medium text-white">
+                    {method.title}
+                  </h3>
                 </div>
                 <p className="text-white/80 mb-4">{method.details}</p>
                 {method.action && (
-                  <a 
-                    href={method.action} 
+                  <a
+                    href={method.action}
                     className="text-indigo-300 hover:text-indigo-200 text-sm font-medium transition-colors"
                   >
-                    Contact via {method.title.split(' ')[0]} →
+                    Contact via {method.title.split(" ")[0]} →
                   </a>
                 )}
               </motion.div>
@@ -135,15 +140,19 @@ export default function Contact() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12"
             >
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  Send Us a Message
+                </h2>
                 <p className="text-white/80 mb-8">
-                  Have questions about our tools or suggestions for new features? Fill out the form and our team will get back to you as soon as possible.
+                  Have questions about our tools or suggestions for new
+                  features? Fill out the form and our team will get back to you
+                  as soon as possible.
                 </p>
                 <div className="space-y-4">
                   {[
                     "Typically respond within 24 hours",
                     "All inquiries are confidential",
-                    "We read every message we receive"
+                    "We read every message we receive",
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="mt-1 w-4 h-4 rounded-full bg-indigo-500/20 flex items-center justify-center">
@@ -157,7 +166,10 @@ export default function Contact() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-white/80 mb-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -172,7 +184,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-white/80 mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -187,7 +202,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-white/80 mb-2"
+                  >
                     Your Message
                   </label>
                   <textarea
@@ -207,10 +225,14 @@ export default function Contact() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 ${isSubmitting ? 'bg-indigo-700' : 'bg-indigo-600 hover:bg-indigo-700'} text-white transition-all duration-200`}
+                    className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 ${
+                      isSubmitting
+                        ? "bg-indigo-700"
+                        : "bg-indigo-600 hover:bg-indigo-700"
+                    } text-white transition-all duration-200`}
                   >
                     <FiSend className="h-4 w-4" />
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </motion.button>
 
                   {submitMessage && (
@@ -235,7 +257,9 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
               Quick answers to common inquiries
             </p>
@@ -245,20 +269,25 @@ export default function Contact() {
             {[
               {
                 question: "How do I suggest a new time calculation tool?",
-                answer: "We welcome all suggestions! Use our contact form above to share your idea. Our team reviews every suggestion and prioritizes based on user demand."
+                answer:
+                  "We welcome all suggestions! Use our contact form above to share your idea. Our team reviews every suggestion and prioritizes based on user demand.",
               },
               {
-                question: "Are your time calculations accurate across timezones?",
-                answer: "Absolutely! All our time-related tools account for timezone differences and daylight saving time where applicable."
+                question:
+                  "Are your time calculations accurate across timezones?",
+                answer:
+                  "Absolutely! All our time-related tools account for timezone differences and daylight saving time where applicable.",
               },
               {
                 question: "Is Time Tools free to use?",
-                answer: "Yes, all our current tools are completely free to use with no hidden costs. We may offer premium features in the future but will always maintain free access to core functionality."
+                answer:
+                  "Yes, all our current tools are completely free to use with no hidden costs. We may offer premium features in the future but will always maintain free access to core functionality.",
               },
               {
                 question: "Can I integrate your tools into my website?",
-                answer: "We're working on an API for developers. In the meantime, you can link directly to our tools or contact us about potential partnerships."
-              }
+                answer:
+                  "We're working on an API for developers. In the meantime, you can link directly to our tools or contact us about potential partnerships.",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -268,7 +297,9 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-400/30 transition-all duration-300"
               >
-                <h3 className="text-lg font-medium text-white mb-2">{item.question}</h3>
+                <h3 className="text-lg font-medium text-white mb-2">
+                  {item.question}
+                </h3>
                 <p className="text-white/70">{item.answer}</p>
               </motion.div>
             ))}

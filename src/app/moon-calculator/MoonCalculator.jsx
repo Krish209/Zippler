@@ -72,7 +72,7 @@ export default function MoonCalculator() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-950 flex items-center justify-center p-6">
+    <div className="min-h-screen py-20 bg-gradient-to-br from-slate-900 to-indigo-950 flex items-center justify-center p-6">
       <div className="w-full max-w-xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="p-6 bg-gradient-to-r from-purple-800 to-indigo-700 text-white text-center">
