@@ -4,17 +4,84 @@
 
 import Link from "next/link";
 import { FaStopwatch } from "react-icons/fa";
-import { FiClock, FiCalendar, FiSun, FiStopwatch } from "react-icons/fi";
+import { FiClock, FiCalendar, FiSun, FiStopwatch, FiMoon } from "react-icons/fi";
 
 import { MdOutlineBedtime, MdSchedule } from "react-icons/md";
 
 const tools = [
   {
+    name: "Age Calculator",
+    description: "Calculate your age from birthdate accurately.",
+    href: "/age-calculator",
+    icon: <FiCalendar className="w-6 h-6 text-emerald-300" />,
+  },
+  {
+    name: "Pet Age Calculator",
+    description: "Convert your pet’s age to human years.",
+    href: "/pet-age-calculator",
+    icon: <FiClock className="w-6 h-6 text-teal-300" />,
+  },
+  {
+    name: "Anniversary Countdown",
+    description: "Countdown to your special date or anniversary.",
+    href: "/anniversary-countdown",
+    icon: <FiCalendar className="w-6 h-6 text-red-300" />,
+  },
+  {
+    name: "Birthday Countdown",
+    description: "Track how many days until your birthday.",
+    href: "/birthday-countdown",
+    icon: <FiCalendar className="w-6 h-6 text-pink-400" />,
+  },
+  {
+    name: "Date Calculator",
+    description: "Calculate the number of days between two dates.",
+    href: "/date-calculator",
+    icon: <FiCalendar className="w-6 h-6 text-yellow-300" />,
+  },
+  {
+    name: "Leap Year Checker",
+    description: "Check if a year is a leap year.",
+    href: "/leap-year-checker",
+    icon: <FiCalendar className="w-6 h-6 text-sky-300" />,
+  },
+  {
+    name: "Night Calculator",
+    description: "Calculate night duration between two times.",
+    href: "/night-calculator",
+    icon: <MdOutlineBedtime className="w-6 h-6 text-blue-300" />,
+  },
+  {
+    name: "Nap Calculator",
+    description: "Best nap lengths based on your schedule.",
+    href: "/nap-calculator",
+    icon: <MdOutlineBedtime className="w-6 h-6 text-lime-300" />,
+  },
+  {
     name: "Sleep Time Calculator",
     description:
       "Find optimal bedtimes or wake-up times based on sleep cycles.",
-    href: "/sleep-time",
+    href: "/sleep-calculator",
     icon: <MdOutlineBedtime className="w-6 h-6 text-indigo-300" />,
+  },
+  {
+    name: "Sleep Length Checker",
+    description: "Determine if your sleep duration is healthy.",
+    href: "/sleep-length-checker",
+    icon: <MdOutlineBedtime className="w-6 h-6 text-purple-200" />,
+  },
+  {
+    name: "Stopwatch",
+    description:
+      "A clean, responsive stopwatch with pause/reset functionality.",
+    href: "/stopwatch",
+    icon: <FaStopwatch className="w-6 h-6 text-pink-300" />,
+  },
+  {
+    name: "Speed Challenge",
+    description: "Test how fast you can click or react!",
+    href: "/speed-challenge",
+    icon: <FaStopwatch className="w-6 h-6 text-red-400" />,
   },
   {
     name: "Time Calculator",
@@ -23,10 +90,10 @@ const tools = [
     icon: <MdSchedule className="w-6 h-6 text-purple-300" />,
   },
   {
-    name: "Date Difference",
-    description: "Calculate the number of days between two dates.",
-    href: "/date-difference",
-    icon: <FiCalendar className="w-6 h-6 text-yellow-300" />,
+    name: "Birthday Day Finder",
+    description: "Find the day of the week your birthday falls on.",
+    href: "/birthday-day-finder",
+    icon: <FiCalendar className="w-6 h-6 text-fuchsia-300" />,
   },
   {
     name: "Weekday Finder",
@@ -35,11 +102,16 @@ const tools = [
     icon: <FiSun className="w-6 h-6 text-green-300" />,
   },
   {
-    name: "Stopwatch",
-    description:
-      "A clean, responsive stopwatch with pause/reset functionality.",
-    href: "/stopwatch",
-    icon: <FaStopwatch className="w-6 h-6 text-pink-300" />,
+    name: "Sun Calculator",
+    description: "Find sunrise and sunset times for any date and location.",
+    href: "/sun-calculator",
+    icon: <FiSun className="w-6 h-6 text-yellow-400" />,
+  },
+  {
+    name: "Moon Calculator",
+    description: "Track moon phases and moonrise/moonset times.",
+    href: "/moon-calculator",
+    icon: <FiMoon className="w-6 h-6 text-indigo-400" />,
   },
 ];
 

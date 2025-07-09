@@ -33,7 +33,7 @@ export default function Home() {
       name: "Date Difference",
       description: "Calculate the difference between two dates",
       icon: <FiCalendar className="h-6 w-6 text-emerald-400" />,
-      href: "/date-difference",
+      href: "/date-calculator",
       color: "from-emerald-600 to-teal-600",
     },
     {

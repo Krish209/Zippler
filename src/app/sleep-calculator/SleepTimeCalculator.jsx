@@ -73,7 +73,7 @@ export default function SleepTimeCalculator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-900 p-4 sm:p-6">
       <div className="pt-20">
-        <div className="w-full mx-auto bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-indigo-500/20">
+        <div className="w-full mx-auto max-w-4xl bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-indigo-500/20">
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 sm:p-8 text-white">
             <div className="flex items-center justify-center gap-3">

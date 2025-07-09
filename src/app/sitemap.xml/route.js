@@ -17,6 +17,7 @@ export async function GET() {
     "date-calculator",
     "leap-year-checker",
     "night-calculator",
+    "nap-calculator",
     "sleep-calculator",
     "sleep-length-checker",
     "stopwatch",

@@ -23,11 +23,11 @@ export const metadata = {
     title: "Leap Year Checker | Verify Any Year Online",
     description:
       "Instantly check if any year is a leap year with our accurate verification tool. Understand leap year rules and see why February gets an extra day every 4 years.",
-    url: "https://zippler-pi.vercel.app/leap-year",
+    url: "https://zippler-pi.vercel.app/leap-year-checker",
     siteName: "Your Site Name",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/images/leap-year-og.jpg",
+        url: "https://zippler-pi.vercel.app/images/leap-year-checker-og.jpg",
         width: 1200,
         height: 630,
         alt: "Leap Year Checker Tool Preview",
@@ -42,11 +42,11 @@ export const metadata = {
     title: "Leap Year Checker | Verify Any Year Online",
     description:
       "Instantly check if any year is a leap year with our free online tool",
-    images: ["https://zippler-pi.vercel.app/images/leap-year-twitter.jpg"],
+    images: ["https://zippler-pi.vercel.app/images/leap-year-checker-twitter.jpg"],
   },
 
   alternates: {
-    canonical: "https://zippler-pi.vercel.app/leap-year",
+    canonical: "https://zippler-pi.vercel.app/leap-year-checker",
   },
 };
 

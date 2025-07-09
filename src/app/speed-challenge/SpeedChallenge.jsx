@@ -113,7 +113,7 @@ export default function SpeedChallenge() {
               {!isRunning && time === 0 && (
                 <button
                   onClick={startStopwatch}
-                  className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg flex items-center gap-2"
+                  className="px-6 py-3 cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg flex items-center gap-2"
                 >
                   <FiPlay /> Start
                 </button>
@@ -122,7 +122,7 @@ export default function SpeedChallenge() {
               {isRunning && (
                 <button
                   onClick={stopStopwatch}
-                  className="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-lg flex items-center gap-2"
+                  className="px-6 py-3 cursor-pointer bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-lg flex items-center gap-2"
                 >
                   <FiFlag /> Stop
                 </button>
@@ -131,7 +131,7 @@ export default function SpeedChallenge() {
               {(time > 0 || isRunning) && (
                 <button
                   onClick={resetStopwatch}
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg flex items-center gap-2"
+                  className="px-6 py-3 cursor-pointer bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg flex items-center gap-2"
                 >
                   <FiRotateCcw /> Reset
                 </button>

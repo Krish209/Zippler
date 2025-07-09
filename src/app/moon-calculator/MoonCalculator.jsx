@@ -10,6 +10,7 @@ import {
   FiTrendingDown,
 } from "react-icons/fi";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { MdOutlineCalendarToday } from "react-icons/md";
 
 export default function MoonCalculator() {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
@@ -93,12 +94,26 @@ export default function MoonCalculator() {
                 <FiCalendar className="text-purple-300" />
                 Select Date
               </label>
-              <input
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                className="w-full bg-white/10 text-white px-4 py-2 rounded-lg border border-white/20 focus:ring-purple-400 focus:ring-2"
-              />
+              <div className="relative">
+                <input
+                  aria-label="Date input"
+                  type="date"
+                  id="date-input"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  className="w-full text-base bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-400 focus:border-blue-400
+                                        [&::-webkit-calendar-picker-indicator]:hidden
+                                        appearance-none transition-all duration-200 hover:bg-white/15"
+                />
+                <label className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                  <MdOutlineCalendarToday
+                    className="text-blue-400 h-5 w-5 cursor-pointer hover:text-blue-300 transition-colors"
+                    onClick={() =>
+                      document.getElementById("date-input")?.showPicker()
+                    }
+                  />
+                </label>
+              </div>
             </div>
 
             {/* Error */}
