@@ -194,11 +194,11 @@ function AnimatedSection({ children }) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen py-20 bg-gradient-to-br from-slate-900 to-indigo-900 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-900 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-16">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-full max-w-4xl h-[800px] bg-indigo-500/10 rounded-full filter blur-[100px]"></div>
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-full mx-auto h-[800px] bg-indigo-500/10 rounded-full filter blur-[100px]"></div>
           <div className="absolute top-0 right-0 transform translate-x-1/4 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full filter blur-[100px]"></div>
         </div>
 

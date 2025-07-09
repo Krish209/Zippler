@@ -72,77 +72,81 @@ export default function MoonCalculator() {
   };
 
   return (
-    <div className="min-h-screen py-20 bg-gradient-to-br from-slate-900 to-indigo-950 flex items-center justify-center p-6">
-      <div className="w-full max-w-xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-        {/* Header */}
-        <div className="p-6 bg-gradient-to-r from-purple-800 to-indigo-700 text-white text-center">
-          <div className="flex items-center justify-center gap-3">
-            <FiMoon className="h-6 w-6" />
-            <h1 className="text-2xl font-bold">Moon Calculator</h1>
-          </div>
-          <p className="text-indigo-100 mt-2 text-sm">
-            View moonrise, moonset, phase, and illumination
-          </p>
-        </div>
-
-        {/* Controls */}
-        <div className="p-6 space-y-6">
-          <div>
-            <label className="text-sm font-medium text-white/80 flex items-center gap-2 mb-1">
-              <FiCalendar className="text-purple-300" />
-              Select Date
-            </label>
-            <input
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              className="w-full bg-white/10 text-white px-4 py-2 rounded-lg border border-white/20 focus:ring-purple-400 focus:ring-2"
-            />
-          </div>
-
-          {/* Error */}
-          {error && (
-            <div className="text-red-400 text-sm bg-red-500/10 p-3 border border-red-500/20 rounded-lg">
-              {error}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-950 p-4 sm:p-6">
+      <div className="pt-20">
+        <div className="w-full mx-auto max-w-xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+          {/* Header */}
+          <div className="p-6 bg-gradient-to-r from-purple-800 to-indigo-700 text-white text-center">
+            <div className="flex items-center justify-center gap-3">
+              <FiMoon className="h-6 w-6" />
+              <h1 className="text-2xl font-bold">Moon Calculator</h1>
             </div>
-          )}
+            <p className="text-indigo-100 mt-2 text-sm">
+              View moonrise, moonset, phase, and illumination
+            </p>
+          </div>
 
-          {/* Results */}
-          {moonData && !error && (
-            <div className="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 p-5 rounded-xl border border-white/10 space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <MoonInfoBox
-                  title="Moonrise"
-                  icon={<FiTrendingUp className="text-blue-300 h-6 w-6" />}
-                  value={
-                    moonData.moonrise ? formatTime(moonData.moonrise) : "—"
-                  }
-                />
-                <MoonInfoBox
-                  title="Moonset"
-                  icon={<FiTrendingDown className="text-pink-300 h-6 w-6" />}
-                  value={moonData.moonset ? formatTime(moonData.moonset) : "—"}
-                />
-                <MoonInfoBox
-                  title="Illumination"
-                  icon={<FiMoon className="text-indigo-300 h-6 w-6" />}
-                  value={`${moonData.illumination}%`}
-                />
-                <MoonInfoBox
-                  title="Phase"
-                  icon={
-                    <BsFillMoonStarsFill className="text-yellow-300 h-6 w-6" />
-                  }
-                  value={moonData.phase}
-                />
-                <MoonInfoBox
-                  title="Moon Age"
-                  icon={<FiClock className="text-purple-300 h-6 w-6" />}
-                  value={`${moonData.age} days`}
-                />
+          {/* Controls */}
+          <div className="p-6 space-y-6">
+            <div>
+              <label className="text-sm font-medium text-white/80 flex items-center gap-2 mb-1">
+                <FiCalendar className="text-purple-300" />
+                Select Date
+              </label>
+              <input
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                className="w-full bg-white/10 text-white px-4 py-2 rounded-lg border border-white/20 focus:ring-purple-400 focus:ring-2"
+              />
+            </div>
+
+            {/* Error */}
+            {error && (
+              <div className="text-red-400 text-sm bg-red-500/10 p-3 border border-red-500/20 rounded-lg">
+                {error}
               </div>
-            </div>
-          )}
+            )}
+
+            {/* Results */}
+            {moonData && !error && (
+              <div className="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 p-5 rounded-xl border border-white/10 space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <MoonInfoBox
+                    title="Moonrise"
+                    icon={<FiTrendingUp className="text-blue-300 h-6 w-6" />}
+                    value={
+                      moonData.moonrise ? formatTime(moonData.moonrise) : "—"
+                    }
+                  />
+                  <MoonInfoBox
+                    title="Moonset"
+                    icon={<FiTrendingDown className="text-pink-300 h-6 w-6" />}
+                    value={
+                      moonData.moonset ? formatTime(moonData.moonset) : "—"
+                    }
+                  />
+                  <MoonInfoBox
+                    title="Illumination"
+                    icon={<FiMoon className="text-indigo-300 h-6 w-6" />}
+                    value={`${moonData.illumination}%`}
+                  />
+                  <MoonInfoBox
+                    title="Phase"
+                    icon={
+                      <BsFillMoonStarsFill className="text-yellow-300 h-6 w-6" />
+                    }
+                    value={moonData.phase}
+                  />
+                  <MoonInfoBox
+                    title="Moon Age"
+                    icon={<FiClock className="text-purple-300 h-6 w-6" />}
+                    value={`${moonData.age} days`}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

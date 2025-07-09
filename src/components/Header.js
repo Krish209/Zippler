@@ -67,7 +67,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 5);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -83,6 +83,7 @@ const Header = () => {
   };
 
   return (
+    // <header className="fixed w-full z-50 transition-all duration-300 bg-slate-900/95 backdrop-blur-md">
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
