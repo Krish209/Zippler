@@ -17,7 +17,7 @@ export const metadata = {
     "day of birth calculator",
     "birthday day name",
     "weekday of birth",
-    "day born on"
+    "day born on",
   ],
 
   openGraph: {
@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Special Date Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/birthday-day-finder-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Birthday Day of the Week Finder showing results",
@@ -39,12 +39,12 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Birth Day of the Week Finder | What Day Were You Born?",
     description:
       "Discover the exact day of the week you were born with our easy birth date day finder. Instantly see what weekday your birthday landed on.",
     images: [
-      "https://zippler-pi.vercel.app/birthday-day-finder-twitter-image.png",
+      "https://zippler-pi.vercel.app/Z3.png",
     ],
   },
 
@@ -53,7 +53,11 @@ export const metadata = {
   },
 };
 
-
 export default function BirthdayOftheWeekPage() {
-  return <DayOfWeekFinder title="Birth Day of the Week Finder" content="Enter your Birthday"/>;
+  return (
+    <DayOfWeekFinder
+      title="Birth Day of the Week Finder"
+      content="Enter your Birthday"
+    />
+  );
 }

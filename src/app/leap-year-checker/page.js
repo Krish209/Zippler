@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Your Site Name",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/images/leap-year-checker-og.jpg",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Leap Year Checker Tool Preview",
@@ -38,11 +38,13 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Leap Year Checker | Verify Any Year Online",
     description:
       "Instantly check if any year is a leap year with our free online tool",
-    images: ["https://zippler-pi.vercel.app/images/leap-year-checker-twitter.jpg"],
+    images: [
+      "https://zippler-pi.vercel.app/Z3.png",
+    ],
   },
 
   alternates: {

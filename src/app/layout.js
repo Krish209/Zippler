@@ -27,7 +27,7 @@ export const metadata = {
     "age calculator",
     "weekday finder",
     "timezone converter",
-    "time management tools"
+    "time management tools",
   ],
 
   openGraph: {
@@ -38,7 +38,7 @@ export const metadata = {
     siteName: "Time Tools Pro",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image-home.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Time Tools Pro landing page preview",
@@ -49,19 +49,17 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Time Tools Pro | Smart Calculators for Time, Sleep, and Dates",
     description:
       "Discover precision tools for calculating sleep, time zones, date differences, and more. Ad-free and beautifully designed.",
-    images: [
-      "https://zippler-pi.vercel.app/twitter-image-home.png",
-    ],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {
     canonical: "https://zippler-pi.vercel.app/",
   },
-  
+
   other: {
     "google-site-verification": "x79cEmQ7U8SWq_WOKaSFuCUyoyOQFKxLCtFmrHDyNBo",
   },

@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "DateTools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/day-finder-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Day of Week Finder Interface",
@@ -35,10 +35,10 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Day of Week Finder | Historical Date Calculator",
     description: "Discover what day of the week any date in history fell on.",
-    images: ["https://zippler-pi.vercel.app/day-finder-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

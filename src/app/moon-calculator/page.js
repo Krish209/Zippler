@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Time Tools Pro",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image-moon.png", // Add your actual OG image
+        url: "https://zippler-pi.vercel.app/Z3.png", // Add your actual OG image
         width: 1200,
         height: 630,
         alt: "Moon Phase and Rise/Set Times",
@@ -38,12 +38,12 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Moon Calculator | See Moonrise & Moon Phase Today",
     description:
       "Get detailed lunar data including moonrise, moonset, illumination, and phase for your current location.",
     images: [
-      "https://zippler-pi.vercel.app/twitter-image-moon.png", // Replace with actual image URL
+      "https://zippler-pi.vercel.app/Z3.png", // Replace with actual image URL
     ],
   },
   alternates: {

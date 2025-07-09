@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Sleep Wellness Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/sleep-checker-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Sleep checker interface showing sleep cycles and optimal wake times",
@@ -39,13 +39,11 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Sleep Length checker | Optimize Your Sleep Cycles",
     description:
       "Calculate your sleep duration, analyze sleep cycles, and find optimal wake-up times for better rest and energy.",
-    images: [
-      "https://zippler-pi.vercel.app/sleep-checker-twitter-image.png",
-    ],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

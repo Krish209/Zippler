@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Date & Time Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/age-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Age Calculator interface showing detailed age breakdown",
@@ -39,11 +39,11 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Age Calculator | Find Your Exact Age in Years, Months, Days",
     description:
       "Calculate your precise age including years, months, and days since birth. Discover when your next birthday will be with our accurate age calculator tool.",
-    images: ["https://zippler-pi.vercel.app/age-calculator-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

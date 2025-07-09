@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Time Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image.jpg",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
       },
@@ -38,10 +38,10 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Time Duration Calculator",
     description: "Calculate precise duration between any two times",
-    images: ["https://zippler-pi.vercel.app/og-image.jpg"],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

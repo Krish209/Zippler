@@ -1,5 +1,5 @@
 // app/anniversary-countdown/page.js
-// 
+//
 // // This is a server component (no 'use client')
 
 import GoalCountdownCalculator from "@/components/GoalCountDownCalc";
@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Special Date Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/anniversary-countdown-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Anniversary Countdown Calculator showing days until celebration",
@@ -39,12 +39,12 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Anniversary Countdown Calculator | Days Until Your Special Date",
     description:
       "Track exactly how much time remains until your anniversary with our countdown calculator. See days, weeks, and months until your next celebration.",
     images: [
-      "https://zippler-pi.vercel.app/anniversary-countdown-twitter-image.png",
+      "https://zippler-pi.vercel.app/Z3.png",
     ],
   },
 
@@ -54,5 +54,11 @@ export const metadata = {
 };
 
 export default function AnniversaryCountdownPage() {
-  return <GoalCountdownCalculator title="Anniversary" content="anniversary" slug="anniversary-countdown" />;
+  return (
+    <GoalCountdownCalculator
+      title="Anniversary"
+      content="anniversary"
+      slug="anniversary-countdown"
+    />
+  );
 }

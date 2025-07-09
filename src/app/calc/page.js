@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Time Tools Pro",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image-home.png", // Optional: custom OG image
+        url: "https://zippler-pi.vercel.app/Z3.png", // Optional: custom OG image
         width: 1200,
         height: 630,
         alt: "Time & Date Toolkit - Preview",
@@ -36,17 +36,16 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Time & Date Toolkit | Smart Online Time Tools",
     description:
       "Use our toolkit to calculate sleep, add or subtract time, find weekdays, and more — fast, focused, and free.",
-    images: ["https://zippler-pi.vercel.app/twitter-image-home.png"], // Optional: custom Twitter image
+    images: ["https://zippler-pi.vercel.app/Z3.png"], // Optional: custom Twitter image
   },
   alternates: {
     canonical: "https://zippler-pi.vercel.app/calc",
   },
 };
-
 
 export default function AllCalculatorPage() {
   return <AllCalculator />;

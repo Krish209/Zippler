@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Time Tools Pro",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image-speed.png", // Replace with your actual image
+        url: "https://zippler-pi.vercel.app/Z3.png", // Replace with your actual image
         width: 1200,
         height: 630,
         alt: "Stopwatch Speed Challenge",
@@ -37,11 +37,11 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Speed Challenge | Can You Stop at 10 Seconds?",
     description:
       "Tap Start. Tap Stop at exactly 10.00s. The closer you get, the better your score. Try now!",
-    images: ["https://zippler-pi.vercel.app/twitter-image-speed.png"], // Replace with actual image
+    images: ["https://zippler-pi.vercel.app/Z3.png"], // Replace with actual image
   },
   alternates: {
     canonical: "https://zippler-pi.vercel.app/speed-challenge",

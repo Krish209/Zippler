@@ -25,7 +25,7 @@ export const metadata = {
     siteName: "Your App Name",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/stopwatch-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Stopwatch Interface Preview",
@@ -36,11 +36,11 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Precision Stopwatch | Time Tracking Tool",
     description:
       "Accurate stopwatch with lap timing functionality. Track time with millisecond precision.",
-    images: ["https://zippler-pi.vercel.app/stopwatch-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

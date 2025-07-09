@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Special Day Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/birthday-countdown-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Birthday Countdown Calculator showing days until celebration",
@@ -39,12 +39,12 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Birthday Countdown Calculator | Days Until Your Special Day",
     description:
       "Track exactly how much time remains until your birthday with our countdown calculator. See days, weeks, and months until your next celebration.",
     images: [
-      "https://zippler-pi.vercel.app/birthday-countdown-twitter-image.png",
+      "https://zippler-pi.vercel.app/Z3.png",
     ],
   },
 
@@ -54,5 +54,11 @@ export const metadata = {
 };
 
 export default function BirthdayCountdownPage() {
-  return <GoalCountdownCalculator title="Birthday" content="birthday" slug="birthday-countdown" />;
+  return (
+    <GoalCountdownCalculator
+      title="Birthday"
+      content="birthday"
+      slug="birthday-countdown"
+    />
+  );
 }

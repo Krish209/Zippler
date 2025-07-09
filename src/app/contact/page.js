@@ -1,7 +1,7 @@
 // app/contact/page.js
 // This is a server component (no 'use client')
 
-import Contact from './Contact';
+import Contact from "./Contact";
 
 export const metadata = {
   title: "Contact Us | Time Tools",
@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "Time Tools Pro",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image-contact.png", // Optional: Replace with your contact OG image
+        url: "https://zippler-pi.vercel.app/Z3.png", // Optional: Replace with your contact OG image
         width: 1200,
         height: 630,
         alt: "Contact Time Tools - Support & Feedback",
@@ -34,18 +34,17 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Contact Time Tools",
     description:
       "Have a question, suggestion, or issue? Use our contact form and our team will respond promptly.",
-    images: ["https://zippler-pi.vercel.app/twitter-image-contact.png"], // Optional
+    images: ["https://zippler-pi.vercel.app/Z3.png"], // Optional
   },
   alternates: {
     canonical: "https://zippler-pi.vercel.app/contact",
   },
 };
 
-
 export default function ContactPage() {
-    return <Contact />;
+  return <Contact />;
 }

@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Pet Care Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/pet-age-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Pet Age Calculator interface showing dog and cat age conversion",
@@ -39,12 +39,12 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Pet Age Calculator | Determine Your Pet's Exact Age",
     description:
       "Calculate your pet's age in years, months, and days. Convert pet years to human years for dogs and cats with our accurate age calculator.",
     images: [
-      "https://zippler-pi.vercel.app/pet-age-calculator-twitter-image.png",
+      "https://zippler-pi.vercel.app/Z3.png",
     ],
   },
 

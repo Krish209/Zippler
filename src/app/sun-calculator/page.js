@@ -17,7 +17,7 @@ export const metadata = {
     "sun position today",
     "SunCalc",
     "time of sunrise",
-    "time of sunset"
+    "time of sunset",
   ],
   openGraph: {
     title: "Sun Calculator | Sunrise, Sunset & Solar Noon Times",
@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Time Tools Pro",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/og-image-sun.png", // Replace with actual image
+        url: "https://zippler-pi.vercel.app/Z3.png", // Replace with actual image
         width: 1200,
         height: 630,
         alt: "Sunrise and Sunset Preview",
@@ -37,12 +37,12 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Sun Calculator | Sunrise & Sunset Times for Any Location",
     description:
       "Get local sunrise, sunset, and solar noon times instantly. No ads, just accurate sun data.",
     images: [
-      "https://zippler-pi.vercel.app/twitter-image-sun.png", // Replace with actual image
+      "https://zippler-pi.vercel.app/Z3.png", // Replace with actual image
     ],
   },
   alternates: {

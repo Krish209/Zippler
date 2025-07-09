@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Time Calculation Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/date-calculator-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "Date Calculator interface showing duration between dates",
@@ -39,11 +39,11 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Date Duration Calculator | Time Between Dates",
     description:
       "Calculate exact duration between two dates in years, months, and days. Perfect for project planning, age calculation, and date difference analysis.",
-    images: ["https://zippler-pi.vercel.app/date-calculator-twitter-image.png"],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

@@ -17,7 +17,7 @@ export const metadata = {
     "timeline calculator developers",
     "about time app",
     "time management tools",
-    "time tools mission"
+    "time tools mission",
   ],
 
   openGraph: {
@@ -28,7 +28,7 @@ export const metadata = {
     siteName: "Special Date Tools",
     images: [
       {
-        url: "https://zippler-pi.vercel.app/about-og-image.png",
+        url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
         alt: "About Time Tools page showing team and milestones",
@@ -39,13 +39,11 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "About Time Tools | Meet the Team Behind the Time Calculators",
     description:
       "Learn the story behind Time Tools, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
-    images: [
-      "https://zippler-pi.vercel.app/about-twitter-image.png",
-    ],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {
@@ -53,7 +51,6 @@ export const metadata = {
   },
 };
 
-
 export default function AboutPage() {
-    return <AboutUs />;
+  return <AboutUs />;
 }
