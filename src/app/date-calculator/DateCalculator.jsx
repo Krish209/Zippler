@@ -106,9 +106,9 @@ export default function DateCalculator() {
                   Date Duration Calculator
                 </h1>
               </div>
-              <p className="text-blue-100 text-center mt-2">
+              <h2 className="text-blue-100 text-center mt-2">
                 Calculate precise duration between any two dates
-              </p>
+              </h2>
             </div>
 
             {/* Main Content */}
@@ -116,9 +116,9 @@ export default function DateCalculator() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Input Section */}
                 <div className="space-y-6">
-                  <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                  <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                     Date Inputs
-                  </h2>
+                  </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">

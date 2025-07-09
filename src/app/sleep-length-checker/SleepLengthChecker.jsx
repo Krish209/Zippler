@@ -86,9 +86,9 @@ export default function SleepLengthChecker() {
                   Sleep Length Calculator
                 </h1>
               </div>
-              <p className="text-indigo-100 text-center mt-2">
+              <h2 className="text-indigo-100 text-center mt-2">
                 Calculate your sleep duration and optimal wake-up times
-              </p>
+              </h2>
             </div>
 
             {/* Main Content */}
@@ -96,10 +96,10 @@ export default function SleepLengthChecker() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Input Section */}
                 <div className="space-y-6">
-                  <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                  <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                     <FiMoon className="h-5 w-5 text-indigo-400" />
                     Sleep Times
-                  </h2>
+                  </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
@@ -299,10 +299,10 @@ export default function SleepLengthChecker() {
 
                         {/* Optimal Wake Times */}
                         <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                          <h4 className="text-sm font-medium text-white/80 flex items-center gap-2 mb-2">
+                          <p className="text-sm font-medium text-white/80 flex items-center gap-2 mb-2">
                             <FiSunrise className="text-yellow-400" />
                             Optimal Wake Times
-                          </h4>
+                          </p>
                           <div className="grid grid-cols-3 gap-2 text-center">
                             {[4, 5, 6].map((cycles) => {
                               const totalMins = cycles * 90;

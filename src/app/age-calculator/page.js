@@ -56,6 +56,7 @@ export default function AgeCalculatorPage() {
     <AgeCalculator
       title="Age Calculator"
       content="Calculate your exact age in years, months, and days"
+      slug="age-calculator"
     />
   );
 }

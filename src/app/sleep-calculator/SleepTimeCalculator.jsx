@@ -82,11 +82,11 @@ export default function SleepTimeCalculator() {
                 Sleep Time Calculator
               </h1>
             </div>
-            <p className="text-indigo-100 text-center mt-2">
+            <h2 className="text-indigo-100 text-center mt-2">
               {mode === "wakeup"
                 ? "Find the best bedtime for your wake-up time"
                 : "Find the best wake-up time for your bedtime"}
-            </p>
+            </h2>
           </div>
 
           {/* Main Content */}
@@ -95,7 +95,7 @@ export default function SleepTimeCalculator() {
               {/* Input Section */}
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                  <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                     {mode === "wakeup" ? (
                       <>
                         <MdSunny className="h-5 w-5 text-indigo-400" />
@@ -107,7 +107,7 @@ export default function SleepTimeCalculator() {
                         Wake-up Time
                       </>
                     )}
-                  </h2>
+                  </p>
                   <button
                     onClick={toggleMode}
                     className="px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 bg-white/10 hover:bg-white/20 text-white cursor-pointer hover:shadow-md"
@@ -279,10 +279,10 @@ export default function SleepTimeCalculator() {
 
                       {/* Sleep Science */}
                       <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <h4 className="text-sm font-medium text-white/80 flex items-center gap-2 mb-2">
+                        <p className="text-sm font-medium text-white/80 flex items-center gap-2 mb-2">
                           <FiClock className="text-indigo-300" />
                           Sleep Cycle Science
-                        </h4>
+                        </p>
                         <ul className="text-xs text-white/60 space-y-1">
                           <li className="flex items-start gap-2">
                             <span className="text-indigo-300">•</span>
@@ -305,10 +305,10 @@ export default function SleepTimeCalculator() {
 
                       {/* Additional Tips */}
                       {/* <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                      <h4 className="text-sm font-medium text-white/80 flex items-center gap-2 mb-2">
+                      <p className="text-sm font-medium text-white/80 flex items-center gap-2 mb-2">
                         <FiSunset className="text-yellow-400" />
                         Sleep Tips
-                      </h4>
+                      </p>
                       <p className="text-xs text-white/60">
                         {mode === "wakeup"
                           ? "Try to go to bed at one of these times to wake up feeling refreshed at your desired time."

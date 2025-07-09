@@ -38,6 +38,7 @@ const Footer = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Contact", href: "/contact" },
+        { name: "Calc Hub", href: "/calc" },
         // { name: "Privacy Policy", href: "/privacy" },
         // { name: "Terms of Service", href: "/terms" },
       ],

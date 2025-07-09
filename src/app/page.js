@@ -457,9 +457,9 @@ export default function Home() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white">
+                      <p className="font-medium text-white">
                         {testimonial.name}
-                      </h4>
+                      </p>
                       <p className="text-sm text-indigo-300">
                         {testimonial.role}
                       </p>

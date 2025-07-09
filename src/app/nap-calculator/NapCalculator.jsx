@@ -73,11 +73,11 @@ export default function NapTimeCalculator() {
                 Nap Time Calculator
               </h1>
             </div>
-            <p className="text-purple-100 text-center mt-2">
+            <h2 className="text-purple-100 text-center mt-2">
               {mode === "napLength"
                 ? "Find your ideal nap end time"
                 : "Find when to start napping"}
-            </p>
+            </h2>
           </div>
 
           {/* Main Content */}
@@ -85,7 +85,7 @@ export default function NapTimeCalculator() {
             <div className="space-y-6">
               {/* Mode Switch */}
               <div className="flex justify-between items-center">
-                <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                   {mode === "napLength" ? (
                     <>
                       <FiMoon className="h-5 w-5 text-purple-300" />
@@ -97,7 +97,7 @@ export default function NapTimeCalculator() {
                       Wake Up At
                     </>
                   )}
-                </h2>
+                </p>
                 <button
                   onClick={toggleMode}
                   className="px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 bg-white/10 hover:bg-white/20 text-white cursor-pointer hover:shadow-md"

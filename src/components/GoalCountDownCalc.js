@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { FiClock, FiTarget } from "react-icons/fi";
 
-export default function GoalCountdownCalculator({ title, content }) {
+export default function GoalCountdownCalculator({ title, content, slug }) {
   const [targetDate, setTargetDate] = useState("");
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -111,7 +111,7 @@ export default function GoalCountdownCalculator({ title, content }) {
           "@type": "WebApplication",
           name: title,
           description: "Calculate time remaining until your target date",
-          url: "https://zippler-pi.vercel.app/anniversary-countdown",
+          url: `https://zippler-pi.vercel.app/${slug}`,
         })}
       </script>
 
@@ -126,9 +126,9 @@ export default function GoalCountdownCalculator({ title, content }) {
                   {title} Countdown
                 </h1>
               </div>
-              <p className="text-blue-100 text-center mt-2">
+              <h2 className="text-blue-100 text-center mt-2">
                 Calculate how much time remains until your {content}
-              </p>
+              </h2>
             </div>
 
             {/* Main Content */}
@@ -136,10 +136,10 @@ export default function GoalCountdownCalculator({ title, content }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Input Section */}
                 <div className="space-y-6">
-                  <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                  <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                     <FiTarget className="h-5 w-5 text-blue-400" />
                     {title} Date
-                  </h2>
+                  </p>
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-white/80 flex items-center gap-2">

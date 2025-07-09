@@ -173,9 +173,9 @@ export default function TimeCalculator() {
                   Time Duration Calculator
                 </h1>
               </div>
-              <p className="text-blue-100 text-center mt-2">
+              <h2 className="text-blue-100 text-center mt-2">
                 Calculate precise duration between any two times
-              </p>
+              </h2>
             </div>
 
             {/* Main Content */}
@@ -184,10 +184,10 @@ export default function TimeCalculator() {
                 {/* Input Section */}
                 <div className="space-y-6">
                   <div className="flex justify-between items-center">
-                    <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                    <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                       {/* <FiSunrise className="text-yellow-300" /> */}
                       Time Inputs
-                    </h2>
+                    </p>
                     <div
                       className="inline-flex rounded-md shadow-sm"
                       role="group"
@@ -339,10 +339,10 @@ export default function TimeCalculator() {
 
                   {isCalculated && !error && (
                     <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-4 border border-white/10 transition-all duration-300 hover:border-blue-400/30">
-                      <h3 className="text-sm font-medium text-white/80 mb-3 flex items-center gap-2">
+                      <p className="text-sm font-medium text-white/80 mb-3 flex items-center gap-2">
                         <FiSunset className="text-yellow-300" />
                         Selected Time Range
-                      </h3>
+                      </p>
                       <div className="flex items-center gap-3 justify-between text-white">
                         <p className="font-medium text-sm bg-blue-500/20 px-3 py-1.5 rounded-lg">
                           {timeFormat === "12"

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { FiClock } from "react-icons/fi";
 
-export default function AgeCalculator({ title, content }) {
+export default function AgeCalculator({ title, content, slug }) {
   const [birthDate, setBirthDate] = useState("");
   const [age, setAge] = useState({
     years: 0,
@@ -111,7 +111,7 @@ export default function AgeCalculator({ title, content }) {
           "@type": "WebApplication",
           name: { title },
           description: "Calculate exact age from birth date",
-          url: "https://zippler-pi.vercel.app/age-calculator",
+          url: `https://zippler-pi.vercel.app/${slug}`,
         })}
       </script>
 
@@ -125,7 +125,7 @@ export default function AgeCalculator({ title, content }) {
                   {title}
                 </h1>
               </div>
-              <p className="text-blue-100 text-center mt-2">{content}</p>
+              <h2 className="text-blue-100 text-center mt-2">{content}</h2>
             </div>
 
             {/* Main Content */}
@@ -133,9 +133,9 @@ export default function AgeCalculator({ title, content }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Input Section */}
                 <div className="space-y-6">
-                  <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                  <h3 className="text-lg font-medium text-white/80 flex items-center gap-2">
                     Birth Date
-                  </h2>
+                  </h3>
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-white/80 flex items-center gap-2">

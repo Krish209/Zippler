@@ -51,6 +51,7 @@ export default function DayOfWeekFinderPage() {
     <DayOfWeekFinder
       title="Day of the Week Finder"
       content="Enter any date in history, present or future"
+      slug="weekday-finder"
     />
   );
 }

@@ -77,9 +77,9 @@ export default function Stopwatch() {
                 Stopwatch
               </h1>
             </div>
-            <p className="text-blue-100 text-center mt-2">
+            <h2 className="text-blue-100 text-center mt-2">
               Track time with precision
-            </p>
+            </h2>
           </div>
 
           {/* Main Content */}
@@ -137,10 +137,10 @@ export default function Stopwatch() {
             {/* Laps */}
             {laps.length > 0 && (
               <div className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-xl p-4 border border-white/10 max-h-64 overflow-y-auto">
-                <h3 className="text-sm font-medium text-white/80 mb-3 flex items-center gap-2">
+                <p className="text-sm font-medium text-white/80 mb-3 flex items-center gap-2">
                   <FiFlag className="h-4 w-4" />
                   Lap Times
-                </h3>
+                </p>
                 <div className="divide-y divide-white/10">
                   {laps.map((lap, index) => (
                     <div

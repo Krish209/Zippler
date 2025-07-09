@@ -54,5 +54,5 @@ export const metadata = {
 };
 
 export default function BirthdayCountdownPage() {
-  return <GoalCountdownCalculator title="Birthday" content="birthday" />;
+  return <GoalCountdownCalculator title="Birthday" content="birthday" slug="birthday-countdown" />;
 }

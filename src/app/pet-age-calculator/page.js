@@ -58,6 +58,7 @@ export default function PetAgeCalculatorPage() {
     <AgeCalculator
       title="Pet Age Calculator"
       content="Calculate your pet's exact age in years, months, and days"
+      slug="pet-age-calculator"
     />
   );
 }

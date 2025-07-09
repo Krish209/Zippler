@@ -82,9 +82,9 @@ export default function MoonCalculator() {
               <FiMoon className="h-6 w-6" />
               <h1 className="text-2xl font-bold">Moon Calculator</h1>
             </div>
-            <p className="text-indigo-100 mt-2 text-sm">
+            <h2 className="text-indigo-100 mt-2 text-sm">
               View moonrise, moonset, phase, and illumination
-            </p>
+            </h2>
           </div>
 
           {/* Controls */}
@@ -172,7 +172,7 @@ function MoonInfoBox({ title, icon, value }) {
   return (
     <div className="bg-white/5 rounded-lg p-4 flex flex-col items-center justify-center border border-white/10 hover:border-purple-400/30 transition">
       <div className="mb-2">{icon}</div>
-      <h4 className="text-sm text-white/60">{title}</h4>
+      <p className="text-sm text-white/60">{title}</p>
       <p className="text-lg font-semibold text-indigo-200 mt-1">{value}</p>
     </div>
   );

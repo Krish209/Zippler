@@ -83,9 +83,9 @@ export default function SpeedChallenge() {
               <FiAward className="h-8 w-8" />
               Stopwatch Challenge
             </h1>
-            <p className="text-indigo-100 text-center mt-2">
+            <h2 className="text-indigo-100 text-center mt-2">
               Try to stop at exactly {TARGET_TIME.toFixed(2)} seconds!
-            </p>
+            </h2>
           </div>
 
           {/* Main Content */}

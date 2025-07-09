@@ -68,9 +68,9 @@ export default function LeapYearChecker() {
                   Leap Year Checker
                 </h1>
               </div>
-              <p className="text-emerald-100 text-center mt-2">
+              <h2 className="text-emerald-100 text-center mt-2">
                 Check if any year is a leap year
-              </p>
+              </h2>
             </div>
 
             {/* Main Content */}

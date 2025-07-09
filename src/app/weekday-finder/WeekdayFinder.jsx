@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { FiCalendar } from "react-icons/fi";
 
-export default function DayOfWeekFinder({ title, content }) {
+export default function DayOfWeekFinder({ title, content, slug }) {
   const [inputDate, setInputDate] = useState("");
   const [dayOfWeek, setDayOfWeek] = useState("");
   const [error, setError] = useState("");
@@ -49,7 +49,7 @@ export default function DayOfWeekFinder({ title, content }) {
           "@type": "WebApplication",
           name: "Day of Week Finder",
           description: "Find what day of the week a particular date fell on",
-          url: "https://zippler-pi.vercel.app/day-finder",
+          url: `https://zippler-pi.vercel.app/${slug}`,
         })}
       </script>
 
@@ -64,9 +64,9 @@ export default function DayOfWeekFinder({ title, content }) {
                   {title}
                 </h1>
               </div>
-              <p className="text-blue-100 text-center mt-2">
+              <h2 className="text-blue-100 text-center mt-2">
                 Discover what day of the week any date fell on
-              </p>
+              </h2>
             </div>
 
             {/* Main Content */}
@@ -74,10 +74,10 @@ export default function DayOfWeekFinder({ title, content }) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Input Section */}
                 <div className="space-y-6">
-                  <h2 className="text-lg font-medium text-white/80 flex items-center gap-2">
+                  <p className="text-lg font-medium text-white/80 flex items-center gap-2">
                     <FiCalendar className="h-5 w-5 text-blue-400" />
                     Date Input
-                  </h2>
+                  </p>
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-white/80 flex items-center gap-2">
@@ -156,9 +156,9 @@ export default function DayOfWeekFinder({ title, content }) {
                               {dayOfWeek.charAt(0)}
                             </span>
                           </div>
-                          <h3 className="text-xl font-medium text-white/80 mb-2">
+                          <p className="text-xl font-medium text-white/80 mb-2">
                             The day was
-                          </h3>
+                          </p>
                           <p className="text-4xl sm:text-5xl font-bold text-blue-300">
                             {dayOfWeek}
                           </p>
@@ -166,9 +166,9 @@ export default function DayOfWeekFinder({ title, content }) {
 
                         {/* Fun Facts */}
                         <div className="mt-6 bg-white/5 rounded-lg p-4 border border-white/10">
-                          <h4 className="text-sm font-medium text-white/70 mb-2">
+                          <p className="text-sm font-medium text-white/70 mb-2">
                             DID YOU KNOW?
-                          </h4>
+                          </p>
                           <p className="text-white/80 text-sm">
                             {dayOfWeek === "Monday" &&
                               "Monday comes from 'Moon day' in Old English"}

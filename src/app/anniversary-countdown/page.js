@@ -54,5 +54,5 @@ export const metadata = {
 };
 
 export default function AnniversaryCountdownPage() {
-  return <GoalCountdownCalculator title="Anniversary" content="anniversary" />;
+  return <GoalCountdownCalculator title="Anniversary" content="anniversary" slug="anniversary-countdown" />;
 }
