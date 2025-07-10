@@ -18,6 +18,7 @@ export const metadata = {
   description:
     "Master your time with precision using Zippler Pro. Explore a collection of beautifully designed time calculators including sleep timers, date difference tools, age calculators, and more.",
   keywords: [
+    "Zippler",
     "time tools",
     "time calculators",
     "date difference calculator",

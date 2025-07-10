@@ -24,7 +24,7 @@ export const metadata = {
     description:
       "Instantly check if any year is a leap year with our accurate verification tool. Understand leap year rules and see why February gets an extra day every 4 years.",
     url: "https://zippler-pi.vercel.app/leap-year-checker",
-    siteName: "Your Site Name",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

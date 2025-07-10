@@ -23,7 +23,7 @@ export const metadata = {
     description:
       "Quick, intuitive tools to help you calculate sleep, add/subtract time, find weekdays, and track time with ease.",
     url: "https://zippler-pi.vercel.app/calc",
-    siteName: "Time Tools Pro",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png", // Optional: custom OG image

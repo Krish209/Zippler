@@ -5,33 +5,33 @@
 import AboutUs from "./AboutUs";
 
 export const metadata = {
-  title: "About Time Tools | Meet the Team Behind the Time Calculators",
+  title: "About Zippler | Meet the Team Behind the Time Calculators",
   description:
-    "Learn the story behind Time Tools, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
+    "Learn the story behind Zippler, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
   keywords: [
-    "about Time Tools",
+    "about Zippler",
     "time calculator team",
-    "who built Time Tools",
-    "time tools story",
-    "team behind time tools",
+    "who built Zippler",
+    "Zippler story",
+    "team behind Zippler",
     "timeline calculator developers",
     "about time app",
     "time management tools",
-    "time tools mission",
+    "Zippler mission",
   ],
 
   openGraph: {
-    title: "About Time Tools | Meet the Team Behind the Time Calculators",
+    title: "About Zippler | Meet the Team Behind the Time Calculators",
     description:
-      "Learn the story behind Time Tools, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
+      "Learn the story behind Zippler, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
     url: "https://zippler-pi.vercel.app/about",
-    siteName: "Special Date Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",
         width: 1200,
         height: 630,
-        alt: "About Time Tools page showing team and milestones",
+        alt: "About Zippler page showing team and milestones",
       },
     ],
     locale: "en_US",
@@ -40,9 +40,9 @@ export const metadata = {
 
   twitter: {
     card: "summary",
-    title: "About Time Tools | Meet the Team Behind the Time Calculators",
+    title: "About Zippler | Meet the Team Behind the Time Calculators",
     description:
-      "Learn the story behind Time Tools, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
+      "Learn the story behind Zippler, meet the passionate team, and explore our journey from a simple idea to a platform used by thousands worldwide.",
     images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 

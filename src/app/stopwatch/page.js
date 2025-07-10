@@ -22,7 +22,7 @@ export const metadata = {
     description:
       "Accurate stopwatch with lap timing functionality. Track time with millisecond precision.",
     url: "https://zippler-pi.vercel.app/stopwatch",
-    siteName: "Your App Name",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

@@ -24,7 +24,7 @@ export const metadata = {
     description:
       "Test your reaction and precision by stopping the timer exactly at 10.00 seconds. Can you get a perfect score?",
     url: "https://zippler-pi.vercel.app/speed-challenge",
-    siteName: "Time Tools Pro",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png", // Replace with your actual image

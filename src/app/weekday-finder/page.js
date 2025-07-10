@@ -21,7 +21,7 @@ export const metadata = {
     description:
       "Discover what day of the week any date in history fell on. Perfect for planning, research, and curiosity.",
     url: "https://zippler-pi.vercel.app/weekday-finder",
-    siteName: "DateTools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

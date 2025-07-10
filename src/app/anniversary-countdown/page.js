@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Track exactly how much time remains until your anniversary with our countdown calculator. See days, weeks, and months until your next celebration.",
     url: "https://zippler-pi.vercel.app/anniversary-countdown",
-    siteName: "Special Date Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",
@@ -43,9 +43,7 @@ export const metadata = {
     title: "Anniversary Countdown Calculator | Days Until Your Special Date",
     description:
       "Track exactly how much time remains until your anniversary with our countdown calculator. See days, weeks, and months until your next celebration.",
-    images: [
-      "https://zippler-pi.vercel.app/Z3.png",
-    ],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

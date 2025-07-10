@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Calculate your sleep duration, analyze sleep cycles, and find optimal wake-up times for better rest and energy.",
     url: "https://zippler-pi.vercel.app/sleep-length-checker",
-    siteName: "Sleep Wellness Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

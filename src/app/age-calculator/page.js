@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Calculate your precise age including years, months, and days since birth. Discover when your next birthday will be with our accurate age calculator tool.",
     url: "https://zippler-pi.vercel.app/age-calculator",
-    siteName: "Date & Time Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

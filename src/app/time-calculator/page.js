@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Calculate precise duration between any two times in hours, minutes, and seconds",
     url: "https://zippler-pi.vercel.app/time-calculator",
-    siteName: "Time Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

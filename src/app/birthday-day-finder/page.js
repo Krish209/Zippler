@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Discover the exact day of the week you were born with our easy birth date day finder. Instantly see what weekday your birthday landed on.",
     url: "https://zippler-pi.vercel.app/birthday-day-finder",
-    siteName: "Special Date Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

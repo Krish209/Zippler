@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Calculate ideal sleep times based on your wake-up or bedtime. Get science-backed recommendations for complete sleep cycles to wake up refreshed.",
     url: "https://zippler-pi.vercel.app/sleep-calculator",
-    siteName: "Sleep Wellness Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",
@@ -43,9 +43,7 @@ export const metadata = {
     title: "Sleep Time Calculator | Find Your Optimal Bedtime & Wake-up Time",
     description:
       "Calculate ideal sleep times based on your wake-up or bedtime. Get science-backed recommendations for complete sleep cycles to wake up refreshed.",
-    images: [
-      "https://zippler-pi.vercel.app/Z3.png",
-    ],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

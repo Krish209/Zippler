@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Calculate exact duration between two dates in years, months, and days. Perfect for project planning, age calculation, and date difference analysis.",
     url: "https://zippler-pi.vercel.app/date-calculator",
-    siteName: "Time Calculation Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",

@@ -96,7 +96,7 @@ export default function AboutUs() {
                   </h2>
                   <div className="space-y-4 text-white/80">
                     <p>
-                      Time Tools began as a simple sleep calculator built by
+                      Zippler began as a simple sleep calculator built by
                       founder Alex Johnson to solve his own struggles with
                       waking up refreshed. What started as a personal project
                       quickly grew into a suite of time-related tools used by
@@ -192,7 +192,7 @@ export default function AboutUs() {
                 Meet The Team
               </h2>
               <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
-                The passionate people behind Time Tools
+                The passionate people behind Zippler
               </p>
             </motion.div>
 

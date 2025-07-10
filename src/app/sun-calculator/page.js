@@ -24,7 +24,7 @@ export const metadata = {
     description:
       "Use this sun time calculator to find sunrise, sunset, and solar noon based on your location and date.",
     url: "https://zippler-pi.vercel.app/sun-calculator",
-    siteName: "Time Tools Pro",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png", // Replace with actual image

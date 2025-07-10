@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "Calculate the exact number of nights between two dates. Perfect for travel planning, hotel bookings, and vacation duration calculations.",
     url: "https://zippler-pi.vercel.app/night-calculator",
-    siteName: "Travel Planning Tools",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png",
@@ -43,9 +43,7 @@ export const metadata = {
     title: "Night Calculator | Count Nights Between Dates",
     description:
       "Calculate the exact number of nights between two dates. Perfect for travel planning, hotel bookings, and vacation duration calculations.",
-    images: [
-      "https://zippler-pi.vercel.app/Z3.png",
-    ],
+    images: ["https://zippler-pi.vercel.app/Z3.png"],
   },
 
   alternates: {

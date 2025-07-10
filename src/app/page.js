@@ -300,7 +300,7 @@ export default function Home() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Time Tools Pro?
+                Why Choose Zippler Pro?
               </h2>
               <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
                 Designed for accuracy and ease of use with powerful features
@@ -394,7 +394,7 @@ export default function Home() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                All Time Tools
+                All time Tools
               </h2>
               <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
                 Comprehensive collection of time-related calculators and

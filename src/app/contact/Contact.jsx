@@ -280,7 +280,7 @@ export default function Contact() {
                     "Absolutely! All our time-related tools account for timezone differences and daylight saving time where applicable.",
                 },
                 {
-                  question: "Is Time Tools free to use?",
+                  question: "Is Zippler free to use?",
                   answer:
                     "Yes, all our current tools are completely free to use with no hidden costs. We may offer premium features in the future but will always maintain free access to core functionality.",
                 },

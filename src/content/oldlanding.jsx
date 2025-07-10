@@ -61,7 +61,7 @@ export default function Home() {
 
   const features = [
     {
-      name: "Precision Time Tools",
+      name: "Precision Tools",
       description:
         "All our calculators use precise algorithms to ensure accurate results",
       icon: <FiClock className="h-5 w-5 text-indigo-500" />,
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="relative z-10 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Time Tools <span className="text-indigo-400">Pro</span>
+              Zippler <span className="text-indigo-400">Pro</span>
             </h1>
             <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto">
               Your all-in-one solution for time calculations, date differences,
@@ -144,7 +144,7 @@ export default function Home() {
       >
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Our Time Tools
+            Our Zippler
           </h2>
           <p className="text-xl text-indigo-200 max-w-2xl mx-auto">
             Choose from our collection of specialized time calculators and

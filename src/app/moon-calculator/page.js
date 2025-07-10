@@ -25,7 +25,7 @@ export const metadata = {
     description:
       "View moonrise, moonset, moon phase, illumination, and lunar age based on your location and selected date.",
     url: "https://zippler-pi.vercel.app/moon-calculator",
-    siteName: "Time Tools Pro",
+    siteName: "Zippler",
     images: [
       {
         url: "https://zippler-pi.vercel.app/Z3.png", // Add your actual OG image
