@@ -64,9 +64,9 @@ export default function WorkHoursCalculator() {
                 Work Hours Calculator
               </h1>
             </div>
-            <p className="text-blue-100 text-center mt-2">
+            <h2 className="text-blue-100 text-center mt-2">
               Calculate your work hours and earnings
-            </p>
+            </h2>
           </div>
 
           {/* Content */}

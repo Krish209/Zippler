@@ -193,9 +193,9 @@ export default function GoldenHourCalculator() {
               <FiSun className="h-8 w-8" />
               Golden Hour Calculator
             </h1>
-            <p className="text-amber-100 text-center mt-2">
+            <h2 className="text-amber-100 text-center mt-2">
               Find the perfect natural lighting for photography
-            </p>
+            </h2>
           </div>
 
           {/* Main Content */}
@@ -274,12 +274,12 @@ export default function GoldenHourCalculator() {
                     className="space-y-6"
                   >
                     <div className="text-center">
-                      <h3 className="text-lg font-medium text-white">
+                      <p className="text-lg font-medium text-white">
                         Photography Times for{" "}
                         <span className="text-amber-400">
                           {results.location}
                         </span>
-                      </h3>
+                      </p>
                       <p className="text-sm text-white/60">
                         {new Date(date).toLocaleDateString("en-US", {
                           weekday: "long",
@@ -295,7 +295,7 @@ export default function GoldenHourCalculator() {
                       <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                         <div className="flex items-center gap-3 mb-2">
                           <FiSun className="h-5 w-5 text-amber-400" />
-                          <h4 className="font-medium text-white">Sunrise</h4>
+                          <h3 className="font-medium text-white">Sunrise</h3>
                         </div>
                         <p className="text-2xl font-bold text-amber-400">
                           {results.sunrise}
@@ -306,7 +306,7 @@ export default function GoldenHourCalculator() {
                       <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                         <div className="flex items-center gap-3 mb-2">
                           <FiMoon className="h-5 w-5 text-purple-400" />
-                          <h4 className="font-medium text-white">Sunset</h4>
+                          <h3 className="font-medium text-white">Sunset</h3>
                         </div>
                         <p className="text-2xl font-bold text-purple-400">
                           {results.sunset}
@@ -318,10 +318,10 @@ export default function GoldenHourCalculator() {
                       {/* Morning Golden Hour */}
                       <div className="bg-amber-500/10 rounded-xl p-4 border border-amber-400/30">
                         <div className="flex items-center justify-between mb-1">
-                          <h4 className="font-medium text-white flex items-center gap-2">
+                          <h3 className="font-medium text-white flex items-center gap-2">
                             <FiSun className="text-amber-400" />
                             Morning Golden Hour
-                          </h4>
+                          </h3>
                           <span className="text-amber-400 font-bold">
                             {results.goldenHourAM}
                           </span>
@@ -334,10 +334,10 @@ export default function GoldenHourCalculator() {
                       {/* Evening Golden Hour */}
                       <div className="bg-amber-500/10 rounded-xl p-4 border border-amber-400/30">
                         <div className="flex items-center justify-between mb-1">
-                          <h4 className="font-medium text-white flex items-center gap-2">
+                          <h3 className="font-medium text-white flex items-center gap-2">
                             <FiSun className="text-amber-400" />
                             Evening Golden Hour
-                          </h4>
+                          </h3>
                           <span className="text-amber-400 font-bold">
                             {results.goldenHourPM}
                           </span>
@@ -350,10 +350,10 @@ export default function GoldenHourCalculator() {
                       {/* Blue Hour */}
                       <div className="bg-blue-500/10 rounded-xl p-4 border border-blue-400/30">
                         <div className="flex items-center justify-between mb-1">
-                          <h4 className="font-medium text-white flex items-center gap-2">
+                          <h3 className="font-medium text-white flex items-center gap-2">
                             <FiMoon className="text-blue-400" />
                             Blue Hour
-                          </h4>
+                          </h3>
                           <span className="text-blue-400 font-bold">
                             {results.blueHourAM} and {results.blueHourPM}
                           </span>
@@ -366,10 +366,10 @@ export default function GoldenHourCalculator() {
                     </div>
 
                     <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                      <h4 className="font-medium text-white mb-2 flex items-center gap-2">
+                      <h3 className="font-medium text-white mb-2 flex items-center gap-2">
                         <FiClock className="text-amber-400" />
                         Photography Tips
-                      </h4>
+                      </h3>
                       <ul className="text-sm text-white/70 space-y-2">
                         <li>• Arrive 15 minutes before golden hour begins</li>
                         <li>
@@ -389,10 +389,10 @@ export default function GoldenHourCalculator() {
                 {/* How It Works */}
                 {!results && (
                   <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                    <h4 className="font-medium text-white mb-2 flex items-center gap-2">
+                    <h3 className="font-medium text-white mb-2 flex items-center gap-2">
                       <FiSun className="text-amber-400" />
                       About Golden Hour
-                    </h4>
+                    </h3>
                     <p className="text-sm text-white/70 mb-3">
                       Golden hour occurs shortly after sunrise and before sunset
                       when the sun is low in the sky, producing soft, warm light

@@ -147,9 +147,9 @@ export default function DogAgeCalculator() {
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 text-white text-center">
             <h1 className="text-3xl font-bold">🐶 Dog Age Calculator</h1>
-            <p className="text-indigo-100 mt-2">
+            <h2 className="text-indigo-100 mt-2">
               Accurate breed-size-adjusted conversions
-            </p>
+            </h2>
           </div>
 
           {/* Body */}

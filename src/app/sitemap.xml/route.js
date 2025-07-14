@@ -29,7 +29,7 @@ export async function GET() {
     "moon-calculator",
     "dog-age-calculator",
     "fiscal-year-calculator",
-    "golden-hour-calcualtor",
+    "golden-hour-calculator",
     "time-allocation",
     "work-hours-calculator"
   ];

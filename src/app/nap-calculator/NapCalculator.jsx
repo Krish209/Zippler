@@ -1,4 +1,4 @@
-// app/nap-calcualtor/NapCalculator.jsx
+// app/nap-calculator/NapCalculator.jsx
 "use client";
 
 import { useState } from "react";

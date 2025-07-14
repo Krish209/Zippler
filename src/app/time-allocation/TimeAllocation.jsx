@@ -84,9 +84,9 @@ export default function TimeAllocation() {
                 Weekly Time Allocation
               </h1>
             </div>
-            <p className="text-indigo-100 text-center mt-2">
+            <h2 className="text-indigo-100 text-center mt-2">
               Visualize how you spend your 168 hours each week
-            </p>
+            </h2>
           </div>
 
           <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">

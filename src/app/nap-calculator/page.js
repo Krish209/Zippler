@@ -24,7 +24,7 @@ export const metadata = {
     title: "Nap Time Calculator | Optimize Your Nap and Wake-up Times",
     description:
       "Quickly find ideal nap end times or wake-up times for power naps ranging from 10 to 90 minutes.",
-    url: "https://zippler-pi.vercel.app/nap-calcualtor",
+    url: "https://zippler-pi.vercel.app/nap-calculator",
     siteName: "Zippler",
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://zippler-pi.vercel.app/nap-calcualtor",
+    canonical: "https://zippler-pi.vercel.app/nap-calculator",
   },
 };
 
