@@ -113,6 +113,37 @@ const tools = [
     href: "/moon-calculator",
     icon: <FiMoon className="w-6 h-6 text-indigo-400" />,
   },
+  // New tools added here:
+  {
+    name: "Dog Age Calculator",
+    description: "Convert your dog’s age to human years accurately.",
+    href: "/dog-age-calculator",
+    icon: <FiClock className="w-6 h-6 text-orange-400" />,
+  },
+  {
+    name: "Fiscal Year Calculator",
+    description: "Calculate fiscal years and quarters for your business.",
+    href: "/fiscal-year-calculator",
+    icon: <FiCalendar className="w-6 h-6 text-cyan-400" />,
+  },
+  {
+    name: "Golden Hour Calculator",
+    description: "Find the best golden hour times for photography.",
+    href: "/golden-hour-calculator",
+    icon: <FiSun className="w-6 h-6 text-yellow-500" />,
+  },
+  {
+    name: "Time Allocation",
+    description: "Plan and allocate your time efficiently.",
+    href: "/time-allocation",
+    icon: <MdSchedule className="w-6 h-6 text-teal-400" />,
+  },
+  {
+    name: "Work Hours Calculator",
+    description: "Calculate total work hours and overtime.",
+    href: "/work-hours-calculator",
+    icon: <MdOutlineBedtime className="w-6 h-6 text-gray-500" />,
+  },
 ];
 
 export default function AllCalculator() {

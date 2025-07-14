@@ -27,6 +27,11 @@ export async function GET() {
     "weekday-finder",
     "sun-calculator",
     "moon-calculator",
+    "dog-age-calculator",
+    "fiscal-year-calculator",
+    "golden-hour-calcualtor",
+    "time-allocation",
+    "work-hours-calculator"
   ];
 
   const xmlItems = pages

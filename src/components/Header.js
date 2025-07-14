@@ -28,6 +28,7 @@ const Header = () => {
       icon: <FiClock className="w-5 h-5" />,
       subLinks: [
         { name: "Time Calculator", href: "/time-calculator" },
+        { name: "Nap Calculator", href: "/nap-calculator" },
         { name: "Stopwatch", href: "/stopwatch" },
         { name: "Sleep Calculator", href: "/sleep-calculator" },
       ],
@@ -51,6 +52,9 @@ const Header = () => {
         { name: "Pet Age Calculator", href: "/pet-age-calculator" },
         { name: "Anniversary Countdown", href: "/anniversary-countdown" },
         { name: "Birthday Countdown", href: "/birthday-countdown" },
+        { name: "Fiscal Year Calcualtor", href: "/fiscal-year-calculator" },
+        { name: "Golden Hour Calcualtor", href: "/golden-hour-calcualtor" },
+        { name: "Work Hours Calcualtor", href: "/work-hours-calcualtor" },
       ],
     },
     { name: "About", href: "/about" },

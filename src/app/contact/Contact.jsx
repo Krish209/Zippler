@@ -70,7 +70,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-900">
-      <div className="pt-20">
+      <div className="pt-20 pb-10">
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-10 sm:pt-16 pb-10 sm:pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

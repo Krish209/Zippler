@@ -63,7 +63,7 @@ export default function NapTimeCalculator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-purple-900 items-center justify-center p-4 sm:p-6">
-      <div className="pt-20">
+      <div className="pt-20 pb-10">
         <div className="w-full mx-auto max-w-3xl bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-purple-500/20">
           {/* Header */}
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 sm:p-8 text-white">
@@ -125,10 +125,14 @@ export default function NapTimeCalculator() {
                 </label>
                 <div className="relative">
                   <input
+                    aria-label="Time input"
                     type="time"
+                    id="time-input"
                     value={inputTime}
                     onChange={(e) => setInputTime(e.target.value)}
-                    className="w-full text-base bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-purple-400 focus:border-purple-400 appearance-none transition-all duration-200 hover:bg-white/15"
+                    className="w-full text-base bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-purple-400 focus:border-purple-400 
+                    [&::-webkit-calendar-picker-indicator]:hidden
+                    appearance-none transition-all duration-200 hover:bg-white/15"
                   />
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2">
                     <MdOutlineAccessTime

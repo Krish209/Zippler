@@ -74,7 +74,7 @@ export default function MoonCalculator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-950 p-4 sm:p-6">
-      <div className="pt-20">
+      <div className="pt-20 pb-10">
         <div className="w-full mx-auto max-w-xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="p-6 bg-gradient-to-r from-purple-800 to-indigo-700 text-white text-center">
@@ -88,7 +88,7 @@ export default function MoonCalculator() {
           </div>
 
           {/* Controls */}
-          <div className="p-6 space-y-6">
+          <div className="p-4 sm:p-6">
             <div>
               <label className="text-sm font-medium text-white/80 flex items-center gap-2 mb-1">
                 <FiCalendar className="text-purple-300" />

@@ -75,7 +75,7 @@ export default function SpeedChallenge() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-indigo-900 p-4 sm:p-6">
-      <div className="pt-20">
+      <div className="pt-20 pb-10">
         <div className="w-full mx-auto max-w-md bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/10">
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 text-white">

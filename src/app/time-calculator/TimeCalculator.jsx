@@ -164,7 +164,7 @@ export default function TimeCalculator() {
       </script>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 to-purple-900 p-4 sm:p-6">
-        <div className="pt-20">
+        <div className="pt-20 pb-10">
           <div className="w-full mx-auto max-w-4xl bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-blue-500/20">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 sm:p-8 text-white">
@@ -233,8 +233,8 @@ export default function TimeCalculator() {
                           value={startTime}
                           onChange={(e) => setStartTime(e.target.value)}
                           className="w-full text-base bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-400 focus:border-blue-400
-                          [&::-webkit-calendar-picker-indicator]:hidden
-                          appearance-none transition-all duration-200 hover:bg-white/15"
+                            [&::-webkit-calendar-picker-indicator]:hidden
+                            appearance-none transition-all duration-200 hover:bg-white/15"
                           placeholder={
                             timeFormat === "12" ? "HH:MM AM/PM" : "HH:MM"
                           }
