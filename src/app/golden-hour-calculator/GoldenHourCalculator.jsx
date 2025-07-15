@@ -238,6 +238,7 @@ export default function GoldenHourCalculator() {
                     Date
                   </label>
                   <input
+                    aria-label="Golden Hour date input"
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
@@ -398,9 +399,9 @@ export default function GoldenHourCalculator() {
                       when the sun is low in the sky, producing soft, warm light
                       with beautiful shadows.
                     </p>
-                    <h5 className="text-sm font-medium text-white mt-3 mb-1">
+                    <h4 className="text-sm font-medium text-white mt-3 mb-1">
                       Blue Hour
-                    </h5>
+                    </h4>
                     <p className="text-sm text-white/70">
                       The period of twilight before sunrise and after sunset
                       when the sun is below the horizon, creating cool blue

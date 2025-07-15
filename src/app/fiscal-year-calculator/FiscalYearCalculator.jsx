@@ -82,6 +82,7 @@ export default function FiscalYearCalculator() {
                 </label>
                 <div className="relative">
                   <input
+                    aria-label="Fiscal date input"
                     type="date"
                     id="fiscal-date"
                     value={selectedDate}

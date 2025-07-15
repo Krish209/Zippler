@@ -193,6 +193,7 @@ export default function DogAgeCalculator() {
                     : "Human Age (Years)"}
                 </label>
                 <input
+                  aria-label="dog-age-input"
                   type="range"
                   min={conversionMode === "dogToHuman" ? 0.1 : 1}
                   max={conversionMode === "dogToHuman" ? 20 : 120}

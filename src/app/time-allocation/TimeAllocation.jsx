@@ -188,13 +188,15 @@ export default function TimeAllocation() {
                             <div className="flex gap-2">
                               <button
                                 onClick={() => setEditingIndex(index)}
-                                className="text-white/50 hover:text-white"
+                                aria-label="Edit menu"
+                                className="text-white/50 hover:text-white cursor-pointer"
                               >
                                 <FiEdit2 size={14} />
                               </button>
                               <button
                                 onClick={() => deleteCategory(index)}
-                                className="text-white/50 hover:text-rose-400"
+                                aria-label="Close menu"
+                                className="text-white/50 hover:text-rose-400 cursor-pointer"
                               >
                                 <FiTrash2 size={14} />
                               </button>
