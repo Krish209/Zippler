@@ -1,11 +1,18 @@
 // components/Footer.js
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { FiClock, FiGithub, FiTwitter, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import {
+  FiClock,
+  FiGithub,
+  FiTwitter,
+  FiLinkedin,
+  FiMail,
+  FiHeart,
+} from "react-icons/fi";
+import { motion } from "framer-motion";
 import logo from "../../public/Z3.png";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Footer = () => {
   const footerLinks = [
@@ -31,6 +38,7 @@ const Footer = () => {
         { name: "Age Calculator", href: "/age-calculator" },
         { name: "Pet Age Calculator", href: "/pet-age-calculator" },
         { name: "Anniversary Countdown", href: "/anniversary-countdown" },
+        { name: "Investment Tools", href: "https://www.sipgo.in" },
       ],
     },
     {
@@ -79,9 +87,10 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-white/70">
-              Precision time calculation tools to help you master your schedule and productivity.
+              Precision time calculation tools to help you master your schedule
+              and productivity.
             </p>
-            
+
             {/* Social links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -109,12 +118,23 @@ const Footer = () => {
               <ul className="space-y-2">
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link
-                      href={link.href}
-                      className="text-white/60 hover:text-indigo-300 transition-colors"
-                    >
-                      {link.name}
-                    </Link>
+                    {link.href.startsWith("http") ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/60 hover:text-indigo-300 transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-white/60 hover:text-indigo-300 transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -131,10 +151,8 @@ const Footer = () => {
 
         {/* Made with love */}
         <div className="mt-4 text-center text-white/50 text-sm flex items-center justify-center gap-1">
-          Made with <FiHeart className="text-rose-500" /> for time
-            enthusiasts
+          Made with <FiHeart className="text-rose-500" /> for time enthusiasts
         </div>
-        
       </div>
     </footer>
   );
